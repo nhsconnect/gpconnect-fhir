@@ -1,0 +1,49 @@
+<OperationDefinition xmlns="http://hl7.org/fhir">
+	<meta>
+		<lastUpdated value="2016-08-03T00:00:00+01:00"/>
+		<tag>
+			<system value="urn:hscic:examples"/>
+			<code value="Operation-Schedule"/>
+			<display value="Schedule Operation"/>
+		</tag>
+	</meta>
+	<url value="http://fhir.nhs.net/OperationDefinition/gpconnect-schedule-operation-1"/>
+	<version value="0.0.1" />
+	<name value="GPConnect-Schedule-Operation-1"/>
+	<status value="active"/>
+	<publisher value="NHS Digital" />
+  <contact>
+    <name value="Interoperability Team" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <date value="2016-08-03T00:00:00+01:00" />
+	<kind value="operation"/>
+	<description value="Request to retrieve the schedules available for a healthcare organisation"/>
+	<code value="gpc.getschedule"/>
+	<system value="false"/>
+	<type value="Organization"/>
+	<instance value="true"/>
+	<parameter>
+		<name value="timePeriod"/>
+		<use value="in"/>
+		<min value="1"/>
+		<max value="1"/>
+		<documentation value="The time period for the requested information"/>
+		<type value="Period"/>
+	</parameter>
+	<parameter>
+		<name value="response"/>
+		<use value="out"/>
+		<min value="1"/>
+		<max value="1"/>
+		<documentation value="The searchset bundle resource that has been returned in response to the given input parameters"/>
+		<type value="Bundle"/>
+		<profile>
+			<reference value="http://fhir.nhs.net/StructureDefinition/gpconnect-getschedule-bundle-1"/>
+		</profile>
+	</parameter>
+</OperationDefinition>

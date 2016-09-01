@@ -1,0 +1,52 @@
+<OperationDefinition xmlns="http://hl7.org/fhir">
+	<meta>
+		<lastUpdated value="2016-08-03T00:00:00+01:00"/>
+		<tag>
+			<system value="urn:hscic:examples"/>
+			<code value="Operation-Register-Patient"/>
+			<display value="Register Patient Operation"/>
+		</tag>
+	</meta>
+	<url value="http://fhir.nhs.net/OperationDefinition/gpconnect-registerpatient-operation-1"/>
+	<version value="0.0.1" />
+	<name value="GPConnect-RegisterPatient-Operation-1"/>
+	<status value="active"/>
+	<publisher value="NHS Digital" />
+  <contact>
+    <name value="Interoperability Team" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <date value="2016-08-03T00:00:00+01:00" />
+	<kind value="operation"/>
+	<description value="Request to register a patient at a healthcare organisation"/>
+	<code value="gpc.registerpatient"/>
+	<system value="false"/>
+	<type value="Patient"/>
+	<instance value="false"/>
+	<parameter>
+		<name value="registerPatient"/>
+		<use value="in"/>
+		<min value="1"/>
+		<max value="1"/>
+		<documentation value="Patient demographic information captured in the patient resource to register the patient."/>
+		<type value="Patient"/>
+			<profile>
+			<reference value="http://fhir.nhs.net/StructureDefinition/gpconnect-register-patient-1"/>
+		</profile>
+	</parameter>
+	<parameter>
+		<name value="response"/>
+		<use value="out"/>
+		<min value="1"/>
+		<max value="1"/>
+		<documentation value="The searchset bundle resource that has been returned in response to the given input parameters"/>
+		<type value="Bundle"/>
+		<profile>
+			<reference value="http://fhir.nhs.net/StructureDefinition/gpconnect-registerpatient-bundle-1"/>
+		</profile>
+	</parameter>
+</OperationDefinition>

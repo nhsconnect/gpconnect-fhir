@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+<meta>
+		<lastUpdated value="2016-08-03T00:00:00+01:00"/>
+</meta>
+<url value="http://fhir.nhs.net/ValueSet/gpconnect-error-or-warning-code-1"/>
+<name value="GP Connect Error or Warning Code"/>
+<status value="draft"/>
+<description value="GP Connect error or warning code in response to a request."/>
+<codeSystem>
+<system value="http://fhir.nhs.net/ValueSet/gpconnect-error-or-warning-code-1"/>
+<concept>
+<code value="GPC-001"/>
+<display value="Not found"/>
+</concept>
+<concept>
+<code value="GPC-002"/>
+<display value="Invalid element"/>
+</concept>
+<concept>
+<code value="GPC-003"/>
+<display value="Missing element"/>
+</concept>
+</codeSystem>
+</ValueSet>
