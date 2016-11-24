@@ -1,17 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2015-09-22T20:02:49.724+10:00" />
+    <tag>
+      <system value="urn:hscic:publishOrder" />
+      <code value="8" />
+    </tag>
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="0" />
+    <valueInteger value="7" />
   </extension>
-  <url value="http://hl7.org.uk/CareConnect-Medication-1" />
+  <url value="http://fhir.nhs.net/StructureDefinition/careconnect-medication-1" />
   <name value="CareConnect-Medication-1" />
   <status value="draft" />
   <publisher value="HL7 UK" />
   <date value="2015-09-22T20:02:49+10:00" />
-  <description value="CareConnect Medication profile" />
+  <description value="CareConnect Medication profile. " />
   <copyright value="Copyright © 2016 HL7 UK&#xD; &#xD; Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD; &#xD; http://www.apache.org/licenses/LICENSE-2.0&#xD; &#xD; Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD; &#xD; HL7® FHIR® standard Copyright © 2011+ HL7&#xD; &#xD; The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD; &#xD; https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="1.0.1" />
   <mapping>
@@ -734,10 +738,6 @@
       <type>
         <code value="Reference" />
         <profile value="http://hl7.org/fhir/StructureDefinition/Substance" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Medication" />
       </type>
       <mapping>
         <identity value="v2" />
@@ -1493,7 +1493,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Medication" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/careconnect-medication-1" />
       </type>
       <mapping>
         <identity value="rim" />
@@ -1724,6 +1724,50 @@
       <mapping>
         <identity value="w5" />
         <map value="clinical.medication" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Medication.product.ingredient.item" />
+      <short value="The product contained" />
+      <definition value="The actual ingredient - either a substance (simple ingredient) or another medication." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Medication.product.ingredient.item" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Substance" />
+      </type>
+      <mapping>
+        <identity value="v2" />
+        <map value="RXC-2-Component Code  if medication: RXO-1-Requested Give Code / RXE-2-Give Code / RXD-2-Dispense/Give Code / RXG-4-Give Code / RXA-5-Administered Code" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value=".player" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Medication.package.content.item" />
+      <short value="A product in the package" />
+      <definition value="Identifies one of the items in the package." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Medication.package.content.item" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/careconnect-medication-1" />
+      </type>
+      <mapping>
+        <identity value="rim" />
+        <map value=".player" />
       </mapping>
     </element>
   </differential>

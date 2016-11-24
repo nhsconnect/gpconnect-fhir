@@ -1,17 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2016-10-19T13:01:09.368+01:00" />
+    <lastUpdated value="2016-10-25T18:04:20.504+01:00" />
+    <tag>
+      <system value="urn:hscic:examples" />
+      <code value="MedicationOrder" />
+      <display value="Medication Order" />
+    </tag>
+    <tag>
+      <system value="urn:hscic:publishOrder" />
+      <code value="9" />
+    </tag>
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1" />
   </extension>
-  <url value="http://hl7.org.uk/CareConnect-GPC-MedicationOrder-1" />
+  <url value="http://fhir.nhs.net/StructureDefinition/careconnect-gpc-medicationorder-1" />
   <version value="1.0" />
   <name value="CareConnect-GPC-MedicationOrder-1" />
   <status value="draft" />
   <publisher value="HL7 UK" />
-  <description value="CareConnect MedicationOrder profile" />
+  <description value="CareConnect MedicationOrder profile, with further constraints applied to support the GP Connect requirements." />
   <copyright value="Copyright © 2016 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="1.0.2" />
   <kind value="resource" />
@@ -55,12 +64,12 @@
       <path value="MedicationOrder.extension" />
       <name value="supplyType" />
       <short value="Medication supply type" />
-      <definition value="Indicates the legal/contractual nature of a prescription." />
+      <definition value="Indicates the legal/contractual nature of a prescription. " />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.uk/CareConnect-MedicationSupplyType-1-Extension.structuredefinition.xml" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/extension-careconnect-medicationsupplytype-1" />
       </type>
     </element>
     <element>
@@ -72,7 +81,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.uk/CareConnect-GPC-MedicationOrderStatement-1-Extension" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/extension-careconnect-gpc-medicationorderstatement-1" />
       </type>
     </element>
     <element>
@@ -392,7 +401,6 @@
       <type>
         <code value="uri" />
       </type>
-      <exampleUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri" />
       <isSummary value="true" />
       <mapping>
         <identity value="v2" />
@@ -532,7 +540,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Organization-1" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/gpconnect-organization-1" />
+        <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
       <mapping>
@@ -692,6 +701,7 @@
       <path value="MedicationOrder.reasonEnded.coding" />
       <slicing>
         <discriminator value="system" />
+        <ordered value="false" />
         <rules value="openAtEnd" />
       </slicing>
       <short value="Code defined by a terminology system" />
@@ -1097,8 +1107,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Patient-1" />
-        <aggregation value="bundled" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/gpconnect-patient-1" />
+        <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
       <mapping>
@@ -1170,7 +1180,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Practitioner-1" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/gpconnect-practitioner-1" />
         <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
@@ -1244,8 +1254,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Encounter-1" />
-        <aggregation value="bundled" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+        <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
       <mapping>
@@ -1320,13 +1330,14 @@
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Condition-1" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Condition" />
         <aggregation value="referenced" />
       </type>
       <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
+        <description value="Codes indicating why the medication was ordered." />
         <valueSetReference>
           <reference value="http://hl7.org/fhir/ValueSet/condition-code" />
         </valueSetReference>
@@ -1377,15 +1388,15 @@
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Medication-1" />
-        <aggregation value="referenced" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/careconnect-medication-1" />
+        <aggregation value="bundled" />
       </type>
       <isSummary value="true" />
       <binding>
         <strength value="required" />
         <description value="Codes identifying medication item" />
         <valueSetReference>
-          <reference value="http://hl7.org.uk/CareConnect-ManufacturedMaterialSnCT-1-VS" />
+          <reference value="http://fhir.nhs.net/ValueSet/careconnect-manufacturedmaterialsnct-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -1502,6 +1513,7 @@
       <path value="MedicationOrder.dosageInstruction.additionalInstructions.coding" />
       <slicing>
         <discriminator value="system" />
+        <ordered value="false" />
         <rules value="openAtEnd" />
       </slicing>
       <short value="Code defined by a terminology system" />
@@ -1924,7 +1936,7 @@
       <definition value="Identifies specific times when the event occurs." />
       <requirements value="In an MAR, for instance, you need to take a general specification, and turn it into a precise specification." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Timing.event" />
         <min value="0" />
@@ -2037,7 +2049,7 @@
       <short value="Length/Range of lengths, or (Start and/or end) limits" />
       <definition value="Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Timing.repeat.bounds[x]" />
         <min value="0" />
@@ -2088,7 +2100,7 @@
       <comments value="For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise)." />
       <requirements value="Some activities are not instantaneous and need to be maintained for a period of time." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Timing.repeat.duration" />
         <min value="0" />
@@ -2116,7 +2128,7 @@
       <comments value="For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise)." />
       <requirements value="Some activities are not instantaneous and need to be maintained for a period of time." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Timing.repeat.durationMax" />
         <min value="0" />
@@ -2136,7 +2148,7 @@
       <short value="s | min | h | d | wk | mo | a - unit of time (UCUM)" />
       <definition value="The units of time for the duration, in UCUM units." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Timing.repeat.durationUnits" />
         <min value="0" />
@@ -2184,7 +2196,7 @@
       <short value="Event occurs up to frequencyMax times per period" />
       <definition value="If present, indicates that the frequency is a range - so repeat between [frequency] and [frequencyMax] times within the period or period range." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Timing.repeat.frequencyMax" />
         <min value="0" />
@@ -2230,7 +2242,7 @@
       <short value="Upper limit of period (3-4 hours)" />
       <definition value="If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as &quot;do this once every 3-5 days." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Timing.repeat.periodMax" />
         <min value="0" />
@@ -2306,7 +2318,7 @@
       <definition value="A code for the timing pattern. Some codes such as BID are ubiquitous, but many institutions define their own additional codes." />
       <comments value="A repeat should always be defined except for the common codes BID, TID, QID, AM and PM, which all systems are required to understand." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Timing.code" />
         <min value="0" />
@@ -2556,6 +2568,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
+        <description value="A coded concept identifying the precondition that should be met or evaluated prior to consuming or administering a medication dose.  For example &quot;pain&quot;, &quot;30 minutes prior to sexual intercourse&quot;, &quot;on flare-up&quot; etc." />
         <valueSetUri value="http://snomed.info/sct" />
       </binding>
       <mapping>
@@ -2580,10 +2593,12 @@
       <type>
         <code value="Reference" />
         <profile value="http://hl7.org/fhir/StructureDefinition/BodySite" />
+        <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
+        <description value="A coded concept describing the site location the medicine enters into or onto the body." />
         <valueSetReference>
           <reference value="http://hl7.org/fhir/ValueSet/approach-site-codes" />
         </valueSetReference>
@@ -2632,6 +2647,7 @@
       <path value="MedicationOrder.dosageInstruction.route.coding" />
       <slicing>
         <discriminator value="system" />
+        <ordered value="false" />
         <rules value="openAtEnd" />
       </slicing>
       <short value="Code defined by a terminology system" />
@@ -2829,7 +2845,10 @@
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
-        <valueSetUri value="http://hl7.org.uk/CareConnect-MedicationDosageRoute-1-VS" />
+        <description value="A coded concept describing the route" />
+        <valueSetReference>
+          <reference value="http://fhir.nhs.net/ValueSet/careconnect-medicationdosageroute-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="v2" />
@@ -3055,6 +3074,7 @@
       <path value="MedicationOrder.dosageInstruction.method.coding" />
       <slicing>
         <discriminator value="system" />
+        <ordered value="false" />
         <rules value="openAtEnd" />
       </slicing>
       <short value="Code defined by a terminology system" />
@@ -3252,7 +3272,8 @@
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
-        <valueSetUri value="http://hl7.org.uk/CareConnect-MedicationDosageMethod-1-VS" />
+        <description value="A coded concept describing the technique by which the medicine is administered." />
+        <valueSetUri value="http://fhir.nhs.net/ValueSet/careconnect-medicationdosagemethod-1" />
       </binding>
       <mapping>
         <identity value="v2" />
@@ -3903,10 +3924,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <type>
-        <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Medication" />
-      </type>
       <isSummary value="true" />
       <mapping>
         <identity value="v2" />
@@ -4058,7 +4075,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.uk/CareConnect-MedicationQuantityText-1-Ext" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/extension-careconnect-medicationquantitytext-1" />
       </type>
     </element>
     <element>
@@ -4900,7 +4917,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-GPC-MedicationOrder-1" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/careconnect-gpc-medicationorder-1" />
+        <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
     </element>
@@ -4985,12 +5003,12 @@
       <path value="MedicationOrder.extension" />
       <name value="supplyType" />
       <short value="Medication supply type" />
-      <definition value="Indicates the legal/contractual nature of a prescription." />
+      <definition value="Indicates the legal/contractual nature of a prescription. " />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.uk/CareConnect-MedicationSupplyType-1-Extension.structuredefinition.xml" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/extension-careconnect-medicationsupplytype-1" />
       </type>
     </element>
     <element>
@@ -5002,7 +5020,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.uk/CareConnect-GPC-MedicationOrderStatement-1-Extension" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/extension-careconnect-gpc-medicationorderstatement-1" />
       </type>
     </element>
     <element>
@@ -5020,7 +5038,6 @@
       <type>
         <code value="uri" />
       </type>
-      <exampleUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri" />
       <isSummary value="true" />
       <mapping>
         <identity value="v2" />
@@ -5079,7 +5096,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Organization-1" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/gpconnect-organization-1" />
+        <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
       <mapping>
@@ -5160,6 +5178,7 @@
       <path value="MedicationOrder.reasonEnded.coding" />
       <slicing>
         <discriminator value="system" />
+        <ordered value="false" />
         <rules value="openAtEnd" />
       </slicing>
       <short value="Code defined by a terminology system" />
@@ -5358,8 +5377,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Patient-1" />
-        <aggregation value="bundled" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/gpconnect-patient-1" />
+        <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
       <mapping>
@@ -5410,7 +5429,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Practitioner-1" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/gpconnect-practitioner-1" />
         <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
@@ -5463,8 +5482,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Encounter-1" />
-        <aggregation value="bundled" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+        <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
       <mapping>
@@ -5518,13 +5537,14 @@
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Condition-1" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Condition" />
         <aggregation value="referenced" />
       </type>
       <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
+        <description value="Codes indicating why the medication was ordered." />
         <valueSetReference>
           <reference value="http://hl7.org/fhir/ValueSet/condition-code" />
         </valueSetReference>
@@ -5575,15 +5595,15 @@
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-Medication-1" />
-        <aggregation value="referenced" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/careconnect-medication-1" />
+        <aggregation value="bundled" />
       </type>
       <isSummary value="true" />
       <binding>
         <strength value="required" />
         <description value="Codes identifying medication item" />
         <valueSetReference>
-          <reference value="http://hl7.org.uk/CareConnect-ManufacturedMaterialSnCT-1-VS" />
+          <reference value="http://fhir.nhs.net/ValueSet/careconnect-manufacturedmaterialsnct-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -5648,6 +5668,7 @@
       <path value="MedicationOrder.dosageInstruction.additionalInstructions.coding" />
       <slicing>
         <discriminator value="system" />
+        <ordered value="false" />
         <rules value="openAtEnd" />
       </slicing>
       <short value="Code defined by a terminology system" />
@@ -5838,7 +5859,7 @@
       <definition value="Identifies specific times when the event occurs." />
       <requirements value="In an MAR, for instance, you need to take a general specification, and turn it into a precise specification." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Timing.event" />
         <min value="0" />
@@ -5851,178 +5872,6 @@
       <mapping>
         <identity value="rim" />
         <map value="QLIST&lt;TS&gt;" />
-      </mapping>
-    </element>
-    <element>
-      <path value="MedicationOrder.dosageInstruction.timing.repeat.bounds[x]" />
-      <short value="Length/Range of lengths, or (Start and/or end) limits" />
-      <definition value="Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule." />
-      <min value="0" />
-      <max value="0" />
-      <base>
-        <path value="Timing.repeat.bounds[x]" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="Quantity" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Duration" />
-      </type>
-      <type>
-        <code value="Range" />
-      </type>
-      <type>
-        <code value="Period" />
-      </type>
-      <isSummary value="true" />
-      <mapping>
-        <identity value="rim" />
-        <map value="IVL(TS) used in a QSI" />
-      </mapping>
-    </element>
-    <element>
-      <path value="MedicationOrder.dosageInstruction.timing.repeat.duration" />
-      <short value="How long when it happens" />
-      <definition value="How long this thing happens for when it happens." />
-      <comments value="For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise)." />
-      <requirements value="Some activities are not instantaneous and need to be maintained for a period of time." />
-      <min value="0" />
-      <max value="0" />
-      <base>
-        <path value="Timing.repeat.duration" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="decimal" />
-      </type>
-      <constraint>
-        <key value="tim-4" />
-        <severity value="error" />
-        <human value="duration SHALL be a non-negative value" />
-        <xpath value="@value &gt;= 0 or not(@value)" />
-      </constraint>
-      <isSummary value="true" />
-      <mapping>
-        <identity value="rim" />
-        <map value="PIVL.phase / EIVL.offset" />
-      </mapping>
-    </element>
-    <element>
-      <path value="MedicationOrder.dosageInstruction.timing.repeat.durationMax" />
-      <short value="How long when it happens (Max)" />
-      <definition value="The upper limit of how long this thing happens for when it happens." />
-      <comments value="For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise)." />
-      <requirements value="Some activities are not instantaneous and need to be maintained for a period of time." />
-      <min value="0" />
-      <max value="0" />
-      <base>
-        <path value="Timing.repeat.durationMax" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="decimal" />
-      </type>
-      <isSummary value="true" />
-      <mapping>
-        <identity value="rim" />
-        <map value="PIVL.phase / EIVL.offset" />
-      </mapping>
-    </element>
-    <element>
-      <path value="MedicationOrder.dosageInstruction.timing.repeat.durationUnits" />
-      <short value="s | min | h | d | wk | mo | a - unit of time (UCUM)" />
-      <definition value="The units of time for the duration, in UCUM units." />
-      <min value="0" />
-      <max value="0" />
-      <base>
-        <path value="Timing.repeat.durationUnits" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="code" />
-      </type>
-      <isSummary value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="A unit of time (units from UCUM)." />
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/units-of-time" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="rim" />
-        <map value="PIVL.phase.unit" />
-      </mapping>
-    </element>
-    <element>
-      <path value="MedicationOrder.dosageInstruction.timing.repeat.frequencyMax" />
-      <short value="Event occurs up to frequencyMax times per period" />
-      <definition value="If present, indicates that the frequency is a range - so repeat between [frequency] and [frequencyMax] times within the period or period range." />
-      <min value="0" />
-      <max value="0" />
-      <base>
-        <path value="Timing.repeat.frequencyMax" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="integer" />
-      </type>
-      <isSummary value="true" />
-      <mapping>
-        <identity value="rim" />
-        <map value="PIVL.phase" />
-      </mapping>
-    </element>
-    <element>
-      <path value="MedicationOrder.dosageInstruction.timing.repeat.periodMax" />
-      <short value="Upper limit of period (3-4 hours)" />
-      <definition value="If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as &quot;do this once every 3-5 days." />
-      <min value="0" />
-      <max value="0" />
-      <base>
-        <path value="Timing.repeat.periodMax" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="decimal" />
-      </type>
-      <isSummary value="true" />
-      <mapping>
-        <identity value="rim" />
-        <map value="PIVL.phase" />
-      </mapping>
-    </element>
-    <element>
-      <path value="MedicationOrder.dosageInstruction.timing.code" />
-      <short value="QD | QOD | Q4H | Q6H | BID | TID | QID | AM | PM +" />
-      <definition value="A code for the timing pattern. Some codes such as BID are ubiquitous, but many institutions define their own additional codes." />
-      <comments value="A repeat should always be defined except for the common codes BID, TID, QID, AM and PM, which all systems are required to understand." />
-      <min value="0" />
-      <max value="0" />
-      <base>
-        <path value="Timing.code" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <isSummary value="true" />
-      <binding>
-        <strength value="preferred" />
-        <description value="Code for a known / defined timing pattern." />
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/timing-abbreviation" />
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="rim" />
-        <map value="QSC.code" />
       </mapping>
     </element>
     <element>
@@ -6046,6 +5895,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
+        <description value="A coded concept identifying the precondition that should be met or evaluated prior to consuming or administering a medication dose.  For example &quot;pain&quot;, &quot;30 minutes prior to sexual intercourse&quot;, &quot;on flare-up&quot; etc." />
         <valueSetUri value="http://snomed.info/sct" />
       </binding>
       <mapping>
@@ -6070,10 +5920,12 @@
       <type>
         <code value="Reference" />
         <profile value="http://hl7.org/fhir/StructureDefinition/BodySite" />
+        <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
+        <description value="A coded concept describing the site location the medicine enters into or onto the body." />
         <valueSetReference>
           <reference value="http://hl7.org/fhir/ValueSet/approach-site-codes" />
         </valueSetReference>
@@ -6091,6 +5943,7 @@
       <path value="MedicationOrder.dosageInstruction.route.coding" />
       <slicing>
         <discriminator value="system" />
+        <ordered value="false" />
         <rules value="openAtEnd" />
       </slicing>
       <short value="Code defined by a terminology system" />
@@ -6141,7 +5994,10 @@
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
-        <valueSetUri value="http://hl7.org.uk/CareConnect-MedicationDosageRoute-1-VS" />
+        <description value="A coded concept describing the route" />
+        <valueSetReference>
+          <reference value="http://fhir.nhs.net/ValueSet/careconnect-medicationdosageroute-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="v2" />
@@ -6278,6 +6134,7 @@
       <path value="MedicationOrder.dosageInstruction.method.coding" />
       <slicing>
         <discriminator value="system" />
+        <ordered value="false" />
         <rules value="openAtEnd" />
       </slicing>
       <short value="Code defined by a terminology system" />
@@ -6328,7 +6185,8 @@
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
-        <valueSetUri value="http://hl7.org.uk/CareConnect-MedicationDosageMethod-1-VS" />
+        <description value="A coded concept describing the technique by which the medicine is administered." />
+        <valueSetUri value="http://fhir.nhs.net/ValueSet/careconnect-medicationdosagemethod-1" />
       </binding>
       <mapping>
         <identity value="v2" />
@@ -6526,10 +6384,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <type>
-        <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Medication" />
-      </type>
       <isSummary value="true" />
       <mapping>
         <identity value="v2" />
@@ -6632,7 +6486,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org.uk/CareConnect-MedicationQuantityText-1-Ext" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/extension-careconnect-medicationquantitytext-1" />
       </type>
     </element>
     <element>
@@ -6932,7 +6786,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org.uk/CareConnect-GPC-MedicationOrder-1" />
+        <profile value="http://fhir.nhs.net/StructureDefinition/careconnect-gpc-medicationorder-1" />
+        <aggregation value="referenced" />
       </type>
       <isSummary value="true" />
     </element>
