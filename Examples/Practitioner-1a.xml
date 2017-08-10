@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence-->
+<Practitioner xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../Schemas/practitioner.xsd">
+	<id value="be375c8e-667b-45fb-a8da-b41e7a67ce88"/>
+	<meta>
+		<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Practitioner-1"/>
+	</meta>
+	<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1">
+		<extension url="language">
+			<valueCodeableConcept>
+			<coding>
+			<system value="https://fhir.hl7.org.uk/CareConnect-HumanLanguage-1"/>
+			<code value="en"/>
+			<display value="English"/>
+			</coding></valueCodeableConcept>
+		</extension>
+		<extension url="preferred">
+		<valueBoolean value="true"/>
+		</extension>
+	</extension>
+	<identifier>
+		<system value="https://fhir.nhs.uk/Id/sds-user-id"/>
+		<value value="C24682468"/>
+	</identifier>
+	<identifier>
+		<system value="https://fhir.nhs.uk/Id/sds-role-profile-id"/>
+		<value value="AB1233"/>
+	</identifier>
+	<name>
+		<family value="Jones"/>
+		<given value="Jane"/>
+	</name>
+	<telecom>
+		<system value="phone"/>
+		<value value="0113-333-1212"/>
+		<use value="work"/>
+	</telecom>
+	<address>
+		<use value="work"/>
+		<line value="Great George Street"/>
+		<city value="Leeds"/>
+		<postalCode value="LS1 3EX"/>
+		<country value="GBR"/>
+	</address>
+	<gender value="female"/>
+	<practitionerRole>
+		<managingOrganization>
+			<reference value="Organization/1474506e-609d-412e-952b-4bc74d769038"/>
+			<display value="King's College Hospital"/>
+		</managingOrganization>
+		<role>
+			<coding>
+				<system value="https://fhir.hl7.org.uk/CareConnect-SDSJobRoleName-1"/>
+				<code value="R0700"/>
+				<display value="Community Nurse"/>
+			</coding>
+		</role>
+	</practitionerRole>
+</Practitioner>
