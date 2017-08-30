@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-28T12:50:57.639+01:00" />
+    <lastUpdated value="2017-08-25T09:48:43.069+01:00" />
     <tag>
       <system value="urn:hscic:publishOrder" />
       <code value="3" />
@@ -25,7 +25,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="3" />
   </extension>
-  <url value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Practitioner-1" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Practitioner-1" />
   <version value="1.1.0" />
   <name value="CareConnect-GPC-Practitioner-1" />
   <status value="active" />
@@ -365,7 +365,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2597,7 +2597,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3772,7 +3772,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -4947,7 +4947,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -7087,7 +7087,7 @@
         <strength value="required" />
         <description value="The gender of a person used for administrative purposes." />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AdministrativeGender-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-AdministrativeGender-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -7615,6 +7615,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7741,7 +7742,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -9165,7 +9166,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Location-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -9681,7 +9682,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -9886,7 +9887,7 @@
         <strength value="required" />
         <description value="The role a person plays representing an organization" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-SDSJobRoleName-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-SDSJobRoleName-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -10122,7 +10123,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.hl7.org.uk/CareConnect-SDSJobRoleName-1" />
+      <fixedUri value="https://fhir.nhs.uk/CareConnect-SDSJobRoleName-1" />
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
@@ -11110,7 +11111,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Location-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -12601,7 +12602,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -13507,7 +13508,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -14212,7 +14213,7 @@
       <short value="Communication preferences" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
       </type>
     </element>
     <element>
@@ -14255,7 +14256,7 @@
       <max value="0" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>
@@ -14290,7 +14291,7 @@
       <max value="0" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>
@@ -14311,7 +14312,7 @@
       <path value="Practitioner.identifier.assigner" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>
@@ -14382,7 +14383,7 @@
       <binding>
         <strength value="required" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AdministrativeGender-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-AdministrativeGender-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -14393,19 +14394,20 @@
         <ordered value="false" />
         <rules value="openAtEnd" />
       </slicing>
+      <mustSupport value="true" />
     </element>
     <element>
       <path value="Practitioner.practitionerRole.managingOrganization" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>
       <path value="Practitioner.practitionerRole.location" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Location-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
       </type>
     </element>
     <element>
@@ -14417,7 +14419,7 @@
       <path value="Practitioner.practitionerRole.managingOrganization" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>
@@ -14433,7 +14435,7 @@
       <binding>
         <strength value="required" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-SDSJobRoleName-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-SDSJobRoleName-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -14445,7 +14447,7 @@
     <element>
       <path value="Practitioner.practitionerRole.role.coding.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.hl7.org.uk/CareConnect-SDSJobRoleName-1" />
+      <fixedUri value="https://fhir.nhs.uk/CareConnect-SDSJobRoleName-1" />
     </element>
     <element>
       <path value="Practitioner.practitionerRole.role.coding.version" />
@@ -14469,7 +14471,7 @@
       <path value="Practitioner.practitionerRole.location" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Location-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
       </type>
     </element>
     <element>
@@ -14480,14 +14482,14 @@
       <path value="Practitioner.qualification.identifier.assigner" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>
       <path value="Practitioner.qualification.issuer" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>

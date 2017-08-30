@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-03-16T12:17:43.265+00:00" />
+    <lastUpdated value="2017-08-25T09:52:04.066+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1" />
   </extension>
-  <url value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-RegistrationDetails-1" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-RegistrationDetails-1" />
   <version value="1.0.0" />
   <name value="Extension-CareConnect-GPC-RegistrationDetails-1" />
   <status value="active" />
@@ -132,7 +132,7 @@
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -303,7 +303,7 @@
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -461,7 +461,7 @@
         <strength value="required" />
         <description value="Registration Type" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-RegistrationType-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-RegistrationType-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -481,7 +481,7 @@
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Element.extension" />
@@ -639,7 +639,7 @@
         <strength value="required" />
         <description value="Registration Status" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-RegistrationStatus-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-RegistrationStatus-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -666,7 +666,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-RegistrationDetails-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-RegistrationDetails-1" />
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
@@ -835,7 +835,6 @@
       <name value="registrationPeriod" />
       <short value="The period of time during which the Patient registration applies" />
       <definition value="The period of time during which the Patient registration applies." />
-      <min value="1" />
       <max value="1" />
     </element>
     <element>
@@ -854,7 +853,6 @@
       <name value="registrationType" />
       <short value="The type of patient registration at the healthcare organisation" />
       <definition value="The type of patient registration at the healthcare organisation." />
-      <min value="1" />
       <max value="1" />
     </element>
     <element>
@@ -873,7 +871,7 @@
         <strength value="required" />
         <description value="Registration Type" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-RegistrationType-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-RegistrationType-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -882,7 +880,6 @@
       <name value="registrationStatus" />
       <short value="The registration status for this patient at the healthcare organisation" />
       <definition value="The registration status for this patient at the healthcare organisation." />
-      <min value="1" />
       <max value="1" />
     </element>
     <element>
@@ -901,13 +898,13 @@
         <strength value="required" />
         <description value="Registration Status" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-RegistrationStatus-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-RegistrationStatus-1" />
         </valueSetReference>
       </binding>
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-RegistrationDetails-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-RegistrationDetails-1" />
     </element>
     <element>
       <path value="Extension.value[x]" />

@@ -6,7 +6,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="0" />
   </extension>
-  <url value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-ReligiousAffiliation-1" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-ReligiousAffiliation-1" />
   <version value="1.0.0" />
   <name value="Extension-CareConnect-GPC-ReligiousAffiliation-1" />
   <status value="active" />
@@ -135,7 +135,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-ReligiousAffiliation-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-ReligiousAffiliation-1" />
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
@@ -183,7 +183,7 @@
         <strength value="required" />
         <description value="Religious Affiliation" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ReligiousAffiliation-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-ReligiousAffiliation-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -207,7 +207,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-ReligiousAffiliation-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-ReligiousAffiliation-1" />
     </element>
     <element>
       <path value="Extension.valueCodeableConcept" />
@@ -221,7 +221,7 @@
         <strength value="required" />
         <description value="Religious Affiliation" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ReligiousAffiliation-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-ReligiousAffiliation-1" />
         </valueSetReference>
       </binding>
     </element>

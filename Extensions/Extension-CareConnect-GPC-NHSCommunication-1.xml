@@ -6,7 +6,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1" />
   </extension>
-  <url value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
   <version value="1.0.0" />
   <name value="Extension-CareConnect-GPC-NHSCommunication-1" />
   <status value="active" />
@@ -292,7 +292,7 @@
         <strength value="required" />
         <description value="Human Language" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-HumanLanguage-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-HumanLanguage-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -641,7 +641,7 @@
         <strength value="required" />
         <description value="Language Ability Mode" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-LanguageAbilityMode-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-LanguageAbilityMode-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -819,7 +819,7 @@
         <strength value="required" />
         <description value="Language Ability Proficiency" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-LanguageAbilityProficiency-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-LanguageAbilityProficiency-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -1017,7 +1017,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
@@ -1205,7 +1205,7 @@
         <strength value="required" />
         <description value="Human Language" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-HumanLanguage-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-HumanLanguage-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -1251,7 +1251,7 @@
         <strength value="required" />
         <description value="Language Ability Mode" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-LanguageAbilityMode-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-LanguageAbilityMode-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -1277,7 +1277,7 @@
         <strength value="required" />
         <description value="Language Ability Proficiency" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-LanguageAbilityProficiency-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-LanguageAbilityProficiency-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -1303,7 +1303,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
     </element>
     <element>
       <path value="Extension.value[x]" />

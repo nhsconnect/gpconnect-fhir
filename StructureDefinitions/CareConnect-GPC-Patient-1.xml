@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-24T13:29:41.406+01:00" />
+    <lastUpdated value="2017-08-25T09:52:57.876+01:00" />
     <tag>
       <system value="urn:hscic:publishOrder" />
       <code value="3" />
@@ -15,7 +15,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="5" />
   </extension>
-  <url value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Patient-1" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Patient-1" />
   <version value="1.1.0" />
   <name value="CareConnect-GPC-Patient-1" />
   <status value="active" />
@@ -361,7 +361,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-RegistrationDetails-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-RegistrationDetails-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -399,7 +399,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-EthnicCategory-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-EthnicCategory-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -437,7 +437,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-ReligiousAffiliation-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-ReligiousAffiliation-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -513,7 +513,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-ResidentialStatus-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-ResidentialStatus-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -530,7 +530,7 @@
         <strength value="required" />
         <description value="The residential status of the patient" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ResidentialStatus-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-ResidentialStatus-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -559,7 +559,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-TreatmentCategory-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-TreatmentCategory-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -575,8 +575,8 @@
       <binding>
         <strength value="required" />
         <description value="The treatment category of the patient" />
-		<valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-TreatmentCategory-1" />
+        <valueSetReference>
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-TreatmentCategory-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -605,7 +605,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1868,6 +1868,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1989,7 +1990,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSNumberVerificationStatus-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSNumberVerificationStatus-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2879,7 +2880,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -4054,7 +4055,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -5167,6 +5168,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6619,12 +6621,13 @@
         <human value="All FHIR elements must have a @value or children" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="required" />
         <description value="The gender of a person used for administrative purposes." />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AdministrativeGender-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-AdministrativeGender-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -6670,6 +6673,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -6852,6 +6856,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isModifier value="true" />
       <isSummary value="true" />
       <mapping>
@@ -7670,7 +7675,7 @@
         <strength value="required" />
         <description value="The domestic partnership status of a person." />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MaritalStatus-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-MaritalStatus-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -11224,7 +11229,7 @@
         <strength value="required" />
         <description value="The gender of a person used for administrative purposes." />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AdministrativeGender-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-AdministrativeGender-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -11258,7 +11263,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <condition value="pat-1" />
@@ -14044,11 +14049,11 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Practitioner-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Practitioner-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -14106,7 +14111,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -14439,7 +14444,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Patient-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Patient-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -14685,9 +14690,13 @@
     <element>
       <path value="Patient.extension" />
       <name value="registrationDetails" />
+      <short value="Additional registration information for the Patient resource" />
+      <definition value="Additional registration information for the Patient resource." />
+      <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-RegistrationDetails-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-RegistrationDetails-1" />
       </type>
     </element>
     <element>
@@ -14696,7 +14705,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-EthnicCategory-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-EthnicCategory-1" />
       </type>
     </element>
     <element>
@@ -14705,7 +14714,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-ReligiousAffiliation-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-ReligiousAffiliation-1" />
       </type>
     </element>
     <element>
@@ -14722,7 +14731,7 @@
       <name value="residentialStatus" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-ResidentialStatus-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-ResidentialStatus-1" />
       </type>
     </element>
     <element>
@@ -14730,7 +14739,7 @@
       <name value="treatmentCategory" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-TreatmentCategory-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-TreatmentCategory-1" />
       </type>
     </element>
     <element>
@@ -14738,7 +14747,7 @@
       <name value="nhsCommunication" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
       </type>
     </element>
     <element>
@@ -14755,6 +14764,7 @@
       <short value="The patient's NHS number" />
       <definition value="The patient's NHS number" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element>
       <path value="Patient.identifier.extension" />
@@ -14770,7 +14780,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSNumberVerificationStatus-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSNumberVerificationStatus-1" />
       </type>
     </element>
     <element>
@@ -14801,7 +14811,7 @@
       <max value="0" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>
@@ -14822,7 +14832,7 @@
       <path value="Patient.identifier.assigner" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>
@@ -14856,6 +14866,7 @@
     <element>
       <path value="Patient.name.given" />
       <exampleString value="Sally" />
+      <mustSupport value="true" />
     </element>
     <element>
       <path value="Patient.name" />
@@ -14888,16 +14899,18 @@
     <element>
       <path value="Patient.gender" />
       <exampleCode value="female" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AdministrativeGender-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-AdministrativeGender-1" />
         </valueSetReference>
       </binding>
     </element>
     <element>
       <path value="Patient.birthDate" />
       <short value="The date of birth for the patient" />
+      <mustSupport value="true" />
     </element>
     <element>
       <path value="Patient.birthDate.extension" />
@@ -14919,6 +14932,7 @@
       <type>
         <code value="dateTime" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element>
       <path value="Patient.address.text" />
@@ -14953,7 +14967,7 @@
       <binding>
         <strength value="required" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MaritalStatus-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-MaritalStatus-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -15086,7 +15100,7 @@
       <binding>
         <strength value="required" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AdministrativeGender-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-AdministrativeGender-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -15094,7 +15108,7 @@
       <path value="Patient.contact.organization" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>
@@ -15114,18 +15128,18 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Practitioner-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Practitioner-1" />
       </type>
     </element>
     <element>
       <path value="Patient.managingOrganization" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>
@@ -15136,7 +15150,7 @@
       <path value="Patient.link.other" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Patient-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Patient-1" />
       </type>
     </element>
   </differential>
