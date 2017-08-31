@@ -1,16 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-26T08:37:56.606+01:00" />
-    <tag>
-      <system value="urn:hscic:publishOrder" />
-      <code value="25" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Device" />
-      <display value="Device" />
-    </tag>
+    <lastUpdated value="2017-08-31T10:07:42.794+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="0" />
@@ -18,7 +9,7 @@
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-device-1" />
   <version value="1.0.0" />
   <name value="GPConnect-Device-1" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="NHS Digital" />
   <contact>
     <name value="Interoperability Team" />
@@ -2606,7 +2597,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
         <aggregation value="referenced" />
       </type>
       <condition value="ele-1" />
@@ -2794,7 +2785,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Location-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
         <aggregation value="bundled" />
       </type>
       <condition value="ele-1" />
@@ -3849,7 +3840,7 @@
       <path value="Device.owner" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
         <aggregation value="referenced" />
       </type>
     </element>
@@ -3868,7 +3859,7 @@
       <short value="Where the device can be located" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Location-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
         <aggregation value="bundled" />
       </type>
     </element>

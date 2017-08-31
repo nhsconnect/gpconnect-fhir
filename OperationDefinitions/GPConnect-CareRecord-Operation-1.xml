@@ -2,14 +2,9 @@
 <OperationDefinition xmlns="http://hl7.org/fhir">
 	<meta>
 		<lastUpdated value="2016-08-03T00:00:00+01:00"/>
-		<tag>
-			<system value="urn:hscic:examples"/>
-			<code value="Operation-NHSPatientRecord"/>
-			<display value="NHS Patient Record Operation"/>
-		</tag>
 	</meta>
-	<url value="http://fhir.nhs.net/OperationDefinition/gpconnect-carerecord-operation-1"/>
-	<version value="1.0" />
+	<url value="https://fhir.nhs.uk/OperationDefinition/gpconnect-carerecord-operation-1"/>
+	<version value="1.0.0" />
 	<name value="GPConnect-CareRecord-Operation-1"/>
 	<status value="active"/>
 	<publisher value="NHS Digital" />
@@ -45,7 +40,7 @@
 		 <type value="CodeableConcept" />
       <binding>
         <strength value="required" />
-        <valueSetUri value="http://fhir.nhs.net/ValueSet/gpconnect-record-section-1" />
+        <valueSetUri value="https://fhir.nhs.uk/ValueSet/gpconnect-record-section-1" />
       </binding>
 	</parameter>
 	<parameter>
@@ -64,7 +59,7 @@
 		<documentation value="View of the Patient's care record. This will be a view of a specified section of the care record."/>
 		<type value="Bundle"/>
 		<profile>
-			<reference value="http://fhir.nhs.net/StructureDefinition/gpconnect-searchset-bundle-1"/>
+			<reference value="https://fhir.nhs.uk/StructureDefinition/gpconnect-searchset-bundle-1"/>
 		</profile>
 	</parameter>
 </OperationDefinition>

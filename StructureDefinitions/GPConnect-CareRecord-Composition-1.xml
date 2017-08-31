@@ -1,79 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-26T09:16:00.678+01:00" />
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-AdministrativeItems" />
-      <display value="NHS Patient Care Record - Administrative Items Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-AllergiesandSensitivities" />
-      <display value="NHS Patient Care Record - Allergies and Sensitivities Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-ClinicalItems" />
-      <display value="NHS Patient Care Record - Clinical Items Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-Encounters" />
-      <display value="NHS Patient Care Record - Encounters Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-Immunisations" />
-      <display value="NHS Patient Care Record - Immunisations Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-Investigations" />
-      <display value="NHS Patient Care Record - Investigations Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-Medications" />
-      <display value="NHS Patient Care Record - Medications Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-Observations" />
-      <display value="NHS Patient Care Record - Observations Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-PatientDetails" />
-      <display value="NHS Patient Care Record - Patient Details Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-Problems" />
-      <display value="NHS Patient Care Record - Problems Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-Referrals" />
-      <display value="NHS Patient Care Record - Referrals Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Composition-CareRecord-Summary" />
-      <display value="NHS Patient Care Record - Summary Section" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:publishOrder" />
-      <code value="4" />
-    </tag>
+    <lastUpdated value="2017-08-31T10:07:47.807+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="2" />
   </extension>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-carerecord-composition-1" />
-  <version value="1.0" />
+  <version value="1.0.0" />
   <name value="GPConnect-CareRecord-Composition-1" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="NHS Digital" />
   <contact>
     <name value="Interoperability Team" />
@@ -2884,7 +2820,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Patient-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Patient-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3423,7 +3359,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -33899,7 +33835,7 @@
       <definition value="The Patient this composition is about" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Patient-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Patient-1" />
       </type>
     </element>
     <element>
@@ -33928,7 +33864,7 @@
       <definition value="Identifies the organization or group who is responsible for ongoing maintenance of and access to the composition/document information" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
     <element>

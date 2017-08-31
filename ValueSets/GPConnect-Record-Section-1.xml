@@ -3,12 +3,12 @@
  	<meta>
 		<lastUpdated value="2016-08-03T00:00:00+01:00"/>
 	</meta>
-  <url value="http://fhir.nhs.net/ValueSet/gpconnect-record-section-1"/>
+  <url value="https://fhir.nhs.uk/ValueSet/gpconnect-record-section-1"/>
   <name value="GP Connect Record Section"/>
   <status value="active"/>
   <description value="A set of codes to classify a section of a composition/document."/>
     <codeSystem>
-    <system value="http://fhir.nhs.net/ValueSet/gpconnect-record-section-1"/>
+    <system value="https://fhir.nhs.uk/gpconnect-record-section-1"/>
      <concept>
         <code value="ADM"/>
         <display value="Administrative Items"/>

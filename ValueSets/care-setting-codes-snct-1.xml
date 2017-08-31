@@ -3,7 +3,7 @@
 	<meta>
 		<lastUpdated value="2016-08-03T00:00:00+01:00"/>
 	</meta>
-	<url value="http://fhir.nhs.net/ValueSet/care-setting-codes-snct-1"/>
+	<url value="https://fhir.nhs.uk/ValueSet/care-setting-codes-snct-1"/>
 	<name value="Care Setting Codes SnCT"/>
 	<status value="active"/>
 	<description value="The following SNOMED CT Concept ID has been proposed to classify the type of care setting."/>

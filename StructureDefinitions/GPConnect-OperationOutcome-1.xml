@@ -1,27 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-26T13:47:12.401+01:00" />
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="OperationOutcome-1a" />
-      <display value="GPConnect-OperationOutcome-1 (NHS Number Invalid) Example" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="OperationOutcome-1b" />
-      <display value="GPConnect-OperationOutcome-1 (No Record Found) Example" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:publishOrder" />
-      <code value="2" />
-    </tag>
+    <lastUpdated value="2017-08-31T10:08:14.129+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-operationoutcome-1" />
   <version value="1.0.0" />
   <name value="GPConnect-OperationOutcome-1" />
   <display value="GPConnect-OperationOutcome-1" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="NHS Digital" />
   <contact>
     <name value="Interoperability Team" />

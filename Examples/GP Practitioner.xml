@@ -3,13 +3,13 @@
 <Practitioner xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../Schemas/practitioner.xsd">
 	<id value="f7737bf5-cfe7-491c-af3a-6f7177d5aee1"/>
 	<meta>
-		<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Practitioner-1"/>
+		<profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Practitioner-1"/>
 	</meta>
-	<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1">
+	<extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1">
 		<extension url="language">
 			<valueCodeableConcept>
 				<coding>
-					<system value="https://fhir.hl7.org.uk/CareConnect-HumanLanguage-1"/>
+					<system value="https://fhir.nhs.uk/CareConnect-HumanLanguage-1"/>
 					<code value="en"/>
 					<display value="English"/>
 				</coding>
@@ -52,7 +52,7 @@
 		</managingOrganization>
 		<role>
 			<coding>
-				<system value="https://fhir.hl7.org.uk/CareConnect-SDSJobRoleName-1"/>
+				<system value="https://fhir.nhs.uk/CareConnect-SDSJobRoleName-1"/>
 				<code value="R0260"/>
 				<display value="General Medical Practitioner"/>
 			</coding>

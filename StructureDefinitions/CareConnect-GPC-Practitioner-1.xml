@@ -1,38 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-25T09:48:43.069+01:00" />
-    <tag>
-      <system value="urn:hscic:publishOrder" />
-      <code value="3" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="GP Practitioner" />
-      <display value="Practitioner example - GP" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Practitioner" />
-      <display value="Practitioner example - Consultant" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Practitioner-1a" />
-      <display value="Practitioner example - Nurse" />
-    </tag>
+    <lastUpdated value="2017-08-31T09:58:51.565+01:00" />
   </meta>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="3" />
-  </extension>
   <url value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Practitioner-1" />
   <version value="1.1.0" />
   <name value="CareConnect-GPC-Practitioner-1" />
   <status value="active" />
   <publisher value="HL7 UK" />
+  <date value="2015-12-21" />
   <description value="The Practitioner resource represents the healthcare professional directly or indirectly involved in the provision of healthcare related services." />
   <copyright value="Copyright © 2016 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
-  <fhirVersion value="1.0.1" />
+  <fhirVersion value="1.0.2" />
   <kind value="resource" />
   <constrainedType value="Practitioner" />
   <abstract value="false" />
@@ -51,7 +30,7 @@
         <max value="*" />
       </base>
       <type>
-        <code value="Practitioner" />
+        <code value="DomainResource" />
       </type>
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
@@ -351,7 +330,7 @@
     <element>
       <path value="Practitioner.extension" />
       <name value="nhsCommunication" />
-      <short value="Communication preferences" />
+      <short value="NHS communication preferences for a resource" />
       <definition value="Communication preferences including a list of Languages which may be used for communication" />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -2597,7 +2576,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3772,7 +3751,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -6529,7 +6508,7 @@
       <type>
         <code value="string" />
       </type>
-      <exampleString value=" " />
+      <exampleString value="13 Amber Street, Leeds, West Yorkshire, LS20 1TV, GBR" />
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
@@ -7742,7 +7721,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -9166,7 +9145,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Location" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -14196,9 +14175,6 @@
   <differential>
     <element>
       <path value="Practitioner" />
-      <type>
-        <code value="Practitioner" />
-      </type>
     </element>
     <element>
       <path value="Practitioner.extension" />
@@ -14210,7 +14186,6 @@
     <element>
       <path value="Practitioner.extension" />
       <name value="nhsCommunication" />
-      <short value="Communication preferences" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1" />
@@ -14254,10 +14229,6 @@
     <element>
       <path value="Practitioner.identifier.assigner" />
       <max value="0" />
-      <type>
-        <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
-      </type>
     </element>
     <element>
       <path value="Practitioner.identifier" />
@@ -14289,10 +14260,6 @@
     <element>
       <path value="Practitioner.identifier.assigner" />
       <max value="0" />
-      <type>
-        <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
-      </type>
     </element>
     <element>
       <path value="Practitioner.identifier" />
@@ -14351,7 +14318,7 @@
     </element>
     <element>
       <path value="Practitioner.address.text" />
-      <exampleString value=" " />
+      <exampleString value="13 Amber Street, Leeds, West Yorkshire, LS20 1TV, GBR" />
     </element>
     <element>
       <path value="Practitioner.address.line" />
@@ -14395,20 +14362,6 @@
         <rules value="openAtEnd" />
       </slicing>
       <mustSupport value="true" />
-    </element>
-    <element>
-      <path value="Practitioner.practitionerRole.managingOrganization" />
-      <type>
-        <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1" />
-      </type>
-    </element>
-    <element>
-      <path value="Practitioner.practitionerRole.location" />
-      <type>
-        <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
-      </type>
     </element>
     <element>
       <path value="Practitioner.practitionerRole" />

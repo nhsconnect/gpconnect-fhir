@@ -1,21 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-28T13:44:46.975+01:00" />
-    <tag>
-      <system value="urn:hscic:publishOrder" />
-      <code value="21" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Location-1a" />
-      <display value="Hematology clinic" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Location-1b" />
-      <display value="Hospital" />
-    </tag>
+    <lastUpdated value="2017-08-31T10:04:10.205+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1" />

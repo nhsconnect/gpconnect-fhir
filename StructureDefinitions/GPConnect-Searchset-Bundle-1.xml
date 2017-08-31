@@ -1,32 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-26T13:44:21.021+01:00" />
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Bundle-CareRecord-Summary" />
-      <display value="GPConnect-Searchset-Bundle-1 containing the GP Connect Query Response bundled resources (Patient Care Record) Summary Section Example" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Bundle-CareRecord-Medications" />
-      <display value="GPConnect-Searchset-Bundle-1 containing the GP Connect Query Response bundled resources (Patient Care Record) Medications Section Example" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Bundle-OperationOutcome" />
-      <display value="GPConnect-Searchset-Bundle-1 containing the the GP Connect Query Response bundled resources  (Operation Outcome - NHS Number Invalid) Example" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:publishOrder" />
-      <code value="1" />
-    </tag>
+    <lastUpdated value="2017-08-31T10:08:57.1+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-searchset-bundle-1" />
   <version value="1.0.0" />
   <name value="GPConnect-Searchset-Bundle-1" />
   <display value="GPConnect-Searchset-Bundle-1" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="NHS Digital" />
   <contact>
     <name value="Interoperability Team" />

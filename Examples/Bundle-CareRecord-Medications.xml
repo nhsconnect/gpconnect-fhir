@@ -12,25 +12,25 @@
 			<Patient>
 				<id value="31686b67-9f20-4644-9a54-193d2f91de57"/>
 				<meta>
-					<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Patient-1"/>
+					<profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Patient-1"/>
 				</meta>
-				<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-OrganDonor-1">
+				<extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-OrganDonor-1">
 					<valueBoolean value="true"/>
 				</extension>
-				<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-EthnicCategory-1">
+				<extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-EthnicCategory-1">
 					<valueCodeableConcept>
 						<coding>
-							<system value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
+							<system value="https://fhir.nhs.uk/CareConnect-EthnicCategory-1"/>
 							<code value="A"/>
 							<display value="British, Mixed British"/>
 						</coding>
 					</valueCodeableConcept>
 				</extension>
-				<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1">
+				<extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSCommunication-1">
 					<extension url="language">
 						<valueCodeableConcept>
 							<coding>
-								<system value="https://fhir.hl7.org.uk/CareConnect-HumanLanguage-1"/>
+								<system value="https://fhir.nhs.uk/CareConnect-HumanLanguage-1"/>
 								<code value="en"/>
 								<display value="English"/>
 							</coding>
@@ -41,10 +41,10 @@
 					</extension>
 				</extension>
 				<identifier>
-					<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-GPC-NHSNumberVerificationStatus-1">
+					<extension url="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-NHSNumberVerificationStatus-1">
 						<valueCodeableConcept>
 							<coding>
-								<system value="https://fhir.hl7.org.uk/CareConnect-NhsNumberVerificationStatus-1"/>
+								<system value="https://fhir.nhs.uk/CareConnect-NhsNumberVerificationStatus-1"/>
 								<code value="01"/>
 								<display value="Number present and verified"/>
 							</coding>
@@ -342,7 +342,7 @@
 			<Organization>
 				<id value="79600119-ebaf-4362-bb89-d473a33b1675"/>
 				<meta>
-					<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Organization-1"/>
+					<profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1"/>
 				</meta>
 				<identifier>
 					<system value="https://fhir.nhs.uk/Id/ods-organization-code"/>

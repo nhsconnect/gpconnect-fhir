@@ -3,7 +3,7 @@
 <Location xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../Schemas/location.xsd">
 	<id value="7335f1e2-49e5-478d-99c7-d6439c2245ec"/>
 	<meta>
-		<profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-GPC-Location-1"/>
+		<profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1"/>
 	</meta>
 	<identifier>
 		<system value="https://fhir.nhs.uk/Id/ods-site-code"/>
