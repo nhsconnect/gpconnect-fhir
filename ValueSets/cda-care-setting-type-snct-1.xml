@@ -7,6 +7,7 @@
 		<valueUri value="urn:oid:2.16.840.1.113883.2.1.3.2.4.15.11.88"/>
 	</extension>
 	<url value="https://fhir.nhs.uk/ValueSet/cda-care-setting-type-snct-1"/>
+	<version value="1.0.0"/>
 	<name value="CDA Care Setting Type SnCT"/>
 	<status value="active"/>
 	<description value="A code from the SNOMED Clinical Terminology UK coding system that describes the setting in which a care event occurs, such as home, GMP surgery, outpatient, etc. Any code from the SNOMED CT UK 'CDA Care Setting Type' subset with subset original id 1271000000134; the corresponding SNOMED CT UK Refset fully specified name is 'Clinical document architecture care setting type simple reference set (foundation metadata concept)' with Refset Id 999000331000000108."/>

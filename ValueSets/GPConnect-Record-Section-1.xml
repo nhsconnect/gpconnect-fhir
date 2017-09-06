@@ -4,6 +4,7 @@
 		<lastUpdated value="2016-08-03T00:00:00+01:00"/>
 	</meta>
   <url value="https://fhir.nhs.uk/ValueSet/gpconnect-record-section-1"/>
+  <version value="1.0.0"/>
   <name value="GP Connect Record Section"/>
   <status value="active"/>
   <description value="A set of codes to classify a section of a composition/document."/>
