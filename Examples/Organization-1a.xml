@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence-->
+<Organization xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schemas/organization.xsd">
+	<id value="1474506e-609d-412e-952b-4bc74d769038"/>
+	<meta>
+		<profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Organization-1"/>
+	</meta>
+	<identifier>
+		<system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+		<value value="R1A02"/>
+	</identifier>
+	<type>
+		<coding>
+			<system value="http://hl7.org/fhir/organization-type"/>
+			<code value="prov"/>
+			<display value="Healthcare Provider"/>
+		</coding>
+	</type>
+	<name value="King's College Hospital"/>
+	<telecom>
+		<system value="phone"/>
+		<value value="0113-333-1234"/>
+		<use value="work"/>
+	</telecom>
+	<address>
+		<use value="work"/>
+		<type value="both"/>
+		<line value="1, Main Street"/>
+		<city value="Leeds"/>
+		<district value="West Yorkshire"/>
+		<postalCode value="LS1 3PO"/>
+	</address>
+</Organization>
