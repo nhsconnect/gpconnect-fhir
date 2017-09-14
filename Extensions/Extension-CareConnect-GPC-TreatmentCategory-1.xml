@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-08T08:27:25.329+01:00" />
+    <lastUpdated value="2017-09-14T11:40:22.851+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1" />
@@ -18,7 +18,7 @@
   <constrainedType value="Extension" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="Patient.identifier" />
+  <context value="Patient" />
   <base value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <snapshot>
     <element>
