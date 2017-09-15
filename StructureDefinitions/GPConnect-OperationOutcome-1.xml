@@ -1,22 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2017-09-14T10:20:36.854+01:00" />
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="OperationOutcome" />
-      <display value="GPConnect-OperationOutcome-1 (ODS Organisation Code Invalid) Example" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:publishOrder" />
-      <code value="2" />
-    </tag>
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-operationoutcome-1" />
   <version value="1.0.0" />
   <name value="GPConnect-OperationOutcome-1" />
   <display value="GPConnect-OperationOutcome-1" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="NHS Digital" />
   <contact>
     <name value="Interoperability Team" />

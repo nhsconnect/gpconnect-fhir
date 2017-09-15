@@ -1,26 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2017-09-14T10:20:41.416+01:00" />
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Slot-1a" />
-      <display value="Slot Example - Out of Hours GP Clinic" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:publishOrder" />
-      <code value="6" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Slot-1b" />
-      <display value="Slot Example - Antenatal Clinic" />
-    </tag>
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-slot-1" />
   <version value="1.0.0" />
   <name value="GPConnect-Slot-1" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="NHS Digital" />
   <contact>
     <name value="Interoperability Team" />

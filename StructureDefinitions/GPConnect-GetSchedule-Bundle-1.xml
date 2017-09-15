@@ -1,21 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2017-09-15T15:46:44.512+01:00" />
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Bundle-Schedule" />
-      <display value="GPConnect-Searchset-Bundle-1 containing the GP Connect Query Response bundled resources" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:examples" />
-      <code value="Bundle-OperationOutcome" />
-      <display value="GPConnect-Searchset-Bundle-1 containing the the GP Connect Query Response bundled resources  (Operation Outcome - ODS Organisation Code Invalid) Example" />
-    </tag>
-    <tag>
-      <system value="urn:hscic:publishOrder" />
-      <code value="1" />
-    </tag>
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-getschedule-bundle-1" />
   <version value="1.0.0" />
