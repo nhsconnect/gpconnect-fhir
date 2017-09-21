@@ -35,7 +35,7 @@
 		<use value="in"/>
 		<min value="0"/>
 		<max value="*"/>
-		<documentation value="To pass a disposition code as a filter to search for free slots"/>
+		<documentation value="Generic search parameter with differentiation applied in the coding.system element"/>
 		<type value="CodeableConcept"/>
 	</parameter>
 	<parameter>

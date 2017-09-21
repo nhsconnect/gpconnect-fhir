@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-14T10:20:41.416+01:00" />
+    <lastUpdated value="2017-09-20T18:37:49.541+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-slot-1" />
   <version value="1.0.0" />
@@ -1040,7 +1040,7 @@
       <definition value="Establishes the namespace in which set of possible id values is unique." />
       <comments value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
       <requirements value="There are many sequences of identifiers.  To perform matching, we need to know what sequence we're dealing with. The system identifies a particular sequence or set of unique identifiers." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Identifier.system" />
@@ -2429,6 +2429,10 @@
       <binding>
         <strength value="example" />
       </binding>
+    </element>
+    <element>
+      <path value="Slot.identifier.system" />
+      <min value="1" />
     </element>
     <element>
       <path value="Slot.identifier.value" />

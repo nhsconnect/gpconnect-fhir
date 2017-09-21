@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-14T10:20:36.854+01:00" />
+    <lastUpdated value="2017-09-20T18:38:53.968+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-operationoutcome-1" />
   <version value="1.0.0" />
@@ -611,7 +611,7 @@
     </element>
     <element>
       <path value="OperationOutcome.issue.details" />
-      <short value="GP Connect Error or Warning code" />
+      <short value="Spine Error or Warning Code" />
       <definition value="Additional details about the error. This may be a text description of the error, or a system code that identifies the error." />
       <comments value="A human readable description of the error issue SHOULD be placed in details.text." />
       <min value="1" />
@@ -637,9 +637,9 @@
       <isSummary value="true" />
       <binding>
         <strength value="required" />
-        <description value="A coded expression of the type of issue" />
+        <description value="Spine error or warning code in response to a request." />
         <valueSetReference>
-          <reference value="https://fhir.nhs.uk/ValueSet/gpconnect-error-or-warning-code-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/spine-error-or-warning-code-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -871,7 +871,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.nhs.uk/ValueSet/gpconnect-error-or-warning-code-1" />
+      <fixedUri value="https://fhir.nhs.uk/spine-error-or-warning-code-1" />
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
@@ -1229,13 +1229,13 @@
     </element>
     <element>
       <path value="OperationOutcome.issue.details" />
-      <short value="GP Connect Error or Warning code" />
+      <short value="Spine Error or Warning Code" />
       <min value="1" />
       <binding>
         <strength value="required" />
-        <description value="A coded expression of the type of issue" />
+        <description value="Spine error or warning code in response to a request." />
         <valueSetReference>
-          <reference value="https://fhir.nhs.uk/ValueSet/gpconnect-error-or-warning-code-1" />
+          <reference value="https://fhir.nhs.uk/ValueSet/spine-error-or-warning-code-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -1248,7 +1248,7 @@
       <path value="OperationOutcome.issue.details.coding.system" />
       <short value="GP Connect Error or Warning code" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/ValueSet/gpconnect-error-or-warning-code-1" />
+      <fixedUri value="https://fhir.nhs.uk/spine-error-or-warning-code-1" />
     </element>
     <element>
       <path value="OperationOutcome.issue.details.coding.version" />
