@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-20T18:37:49.541+01:00" />
+    <lastUpdated value="2017-09-21T16:10:57.174+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-slot-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="GPConnect-Slot-1" />
   <status value="active" />
   <publisher value="NHS Digital" />
