@@ -46,7 +46,7 @@
 		<documentation value="The searchset bundle resource that has been returned in response to the given input parameters"/>
 		<type value="Bundle"/>
 		<profile>
-			<reference value="https://fhir.nhs.uk/StructureDefinition/gpconnect-getschedule-bundle-1"/>
+			<reference value="https://fhir.nhs.uk/StructureDefinition/gpconnect-searchset-bundle-1"/>
 		</profile>
 	</parameter>
 </OperationDefinition>
