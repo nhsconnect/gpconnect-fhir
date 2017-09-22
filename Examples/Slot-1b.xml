@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence-->
+<Slot xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../Schemas/slot.xsd">
+	<id value="3e604e21-40d3-46c9-91be-b2859cd1a99b"/>
+	<meta>
+		<profile value="https://fhir.nhs.uk/StructureDefinition/gpconnect-slot-1"/>
+	</meta>
+	<identifier>
+		<system value="https://fhir.nhs.uk/Id/gpconnect-slot-identifier"/>
+		<value value="Slot001"/>
+	</identifier>
+	<schedule>
+		<reference value="Schedule/a2aea64f-f6d7-4ce7-85e0-f7dc80c21f86"/>
+		<display value="Appointment Schedule - Antenatal Clinic"/>
+	</schedule>
+	<freeBusyType value="free"/>
+	<start value="2015-09-01T11:30:00+00:00"/>
+	<end value="2015-09-01T11:45:00+00:00"/>
+	<overbooked value="false"/>
+	<comment value="This slot is only to be used for Antenatal Clinic appointments."/>
+</Slot>

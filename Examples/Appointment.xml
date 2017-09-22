@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence-->
+<Appointment xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../Schemas/appointment.xsd">
+	<id value="931b843e-a532-4086-95c3-28b69e0ced6a"/>
+	<meta>
+		<profile value="https://fhir.nhs.uk/StructureDefinition/gpconnect-appointment-1"/>
+	</meta>
+	<identifier>
+		<system value="https://fhir.nhs.uk/Id/gpconnect-appointment-identifier"/>
+		<value value="898976578"/>
+	</identifier>
+	<status value="booked"/>
+	<type>
+		<text  value="General practice"/>
+	</type>
+	<reason>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="17436001"/>
+			<display value="Medical consultation with outpatient"/>
+		</coding>
+	</reason>
+	<priority value="4"/>
+	<description value="Increased pain in right arm."/>
+	<start value="2014-12-11T19:30:00+00:00"/>
+	<end value="2014-12-11T19:45:00+00:00"/>
+	<slot>
+		<reference value="Slot/79a37bc3-8d22-4805-b1a7-8cf8ceca9217"/>
+		<display value="Appointment Slot - Out of Hours GP Clinic - 19:30 - 19:45"/>
+	</slot>
+	<comment value="Discussion on problem 'Increased pain in right arm.'"/>
+	<participant>
+		<actor>
+			<reference value="Patient/31686b67-9f20-4644-9a54-193d2f91de57"/>
+			<display value="Sally Taylor"/>
+		</actor>
+		<required value="required"/>
+		<status value="accepted"/>
+	</participant>
+	<participant>
+		<actor>
+			<reference value="Practitioner/97f9f119-1809-4300-aabb-ca23ab280181"/>
+			<display value="Dr. Bob Jones"/>
+		</actor>
+		<required value="required"/>
+		<status value="tentative"/>
+	</participant>
+	<participant>
+		<actor>
+			<reference value="Location/328cce0d-e1ff-454f-9652-2586355bae46"/>
+			<display value="Out of Hours GP Clinic - Bridge Street Medical Practice"/>
+		</actor>
+		<required value="required"/>
+		<status value="accepted"/>
+	</participant>
+</Appointment>

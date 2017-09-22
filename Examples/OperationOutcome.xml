@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This example message is provided for illustrative purposes only. It has had no clinical validation. Where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take precedence-->
+<OperationOutcome xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schemas/operationOutcome.xsd">
+	<id value="f3819168-4847-44ea-8728-1f50a520e294"/>
+	<meta>
+		<profile value="https://fhir.nhs.uk/StructureDefinition/gpconnect-operationoutcome-1"/>
+	</meta>
+	<issue>
+		<severity value="error"/>
+		<code value="invalid"/>
+		<details>
+			<coding>
+				<system value="https://fhir.nhs.uk/spine-error-or-warning-code-1"/>
+				<code value="INVALID_ELEMENT"/>
+			</coding>
+		</details>
+		<diagnostics value="Invalid element"/>
+	</issue>
+</OperationOutcome>
