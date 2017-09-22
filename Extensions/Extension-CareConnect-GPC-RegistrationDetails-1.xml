@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-25T09:52:04.066+01:00" />
+    <lastUpdated value="2017-09-20T18:31:42.783+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1" />
   </extension>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-CareConnect-GPC-RegistrationDetails-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="Extension-CareConnect-GPC-RegistrationDetails-1" />
   <status value="active" />
   <publisher value="HL7 UK" />
@@ -482,7 +482,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -642,6 +642,178 @@
           <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-RegistrationStatus-1" />
         </valueSetReference>
       </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <name value="preferredBranchSurgery" />
+      <short value="Additional Content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+          <valueString value="children()" />
+        </extension>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Extension.extension.id" />
+      <short value="xml:id (or equivalent in JSON)" />
+      <definition value="unique id for the element within a resource (for internal references)." />
+      <comments value="RFC 4122" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="id" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+          <valueString value="children()" />
+        </extension>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Extension.extension.extension" />
+      <short value="Additional Content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+          <valueString value="children()" />
+        </extension>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <short value="identifies the meaning of the extension" />
+      <definition value="Source of the definition for the extension code - a logical name or a URL." />
+      <comments value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Extension.url" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="preferredBranchSurgery" />
+      <condition value="ele-1" />
+      <constraint>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+          <valueString value="children()" />
+        </extension>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Extension.extension.valueReference" />
+      <short value="Location of usual branch surgery" />
+      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Extension.value[x]" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+          <valueString value="children()" />
+        </extension>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -880,7 +1052,7 @@
       <name value="registrationStatus" />
       <short value="The registration status for this patient at the healthcare organisation" />
       <definition value="The registration status for this patient at the healthcare organisation." />
-      <max value="1" />
+      <max value="0" />
     </element>
     <element>
       <path value="Extension.extension.url" />
@@ -901,6 +1073,23 @@
           <reference value="https://fhir.nhs.uk/ValueSet/CareConnect-RegistrationStatus-1" />
         </valueSetReference>
       </binding>
+    </element>
+    <element>
+      <path value="Extension.extension" />
+      <name value="preferredBranchSurgery" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Extension.extension.url" />
+      <fixedUri value="preferredBranchSurgery" />
+    </element>
+    <element>
+      <path value="Extension.extension.valueReference" />
+      <short value="Location of usual branch surgery" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
+      </type>
     </element>
     <element>
       <path value="Extension.url" />

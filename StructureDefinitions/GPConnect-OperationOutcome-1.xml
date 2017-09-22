@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-31T10:08:14.129+01:00" />
+    <lastUpdated value="2017-09-21T16:10:46.92+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-operationoutcome-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="GPConnect-OperationOutcome-1" />
   <display value="GPConnect-OperationOutcome-1" />
   <status value="active" />
@@ -19,7 +19,7 @@
   </contact>
   <date value="2016-08-03T00:00:00+01:00" />
   <description value="The Operation Outcome resource supports a collection of error, warning or information messages that result from a GP Connect Query Request." />
-  <copyright value="Copyright © 2016 Health and Social Care Information Centre" />
+  <copyright value="Copyright © 2017 Health and Social Care Information Centre" />
   <fhirVersion value="1.0.2" />
   <mapping>
     <identity value="v2" />
@@ -541,7 +541,7 @@
         <strength value="required" />
         <description value="How the issue affects the success of the action." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/issue-severity" />
+          <reference value="http://hl7.org/fhir/DSTU2/valueset-issue-severity.html" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -611,7 +611,7 @@
     </element>
     <element>
       <path value="OperationOutcome.issue.details" />
-      <short value="Spine Error or Warning code" />
+      <short value="Spine Error or Warning Code" />
       <definition value="Additional details about the error. This may be a text description of the error, or a system code that identifies the error." />
       <comments value="A human readable description of the error issue SHOULD be placed in details.text." />
       <min value="1" />
@@ -637,7 +637,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="required" />
-        <description value="A coded expression of the type of issue" />
+        <description value="Spine error or warning code in response to a request." />
         <valueSetReference>
           <reference value="https://fhir.nhs.uk/ValueSet/spine-error-or-warning-code-1" />
         </valueSetReference>
@@ -760,13 +760,6 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="Spine error or warnng codes" />
-        <valueSetReference>
-          <reference value="https://fhir.nhs.uk/ValueSet/spine-error-or-warning-code-1" />
-        </valueSetReference>
-      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1216,6 +1209,15 @@
       </type>
     </element>
     <element>
+      <path value="OperationOutcome.issue.severity" />
+      <binding>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/DSTU2/valueset-issue-severity.html" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element>
       <path value="OperationOutcome.issue.code" />
       <label value=" " />
       <definition value="Describes the type of the issue." />
@@ -1227,11 +1229,11 @@
     </element>
     <element>
       <path value="OperationOutcome.issue.details" />
-      <short value="Spine Error or Warning code" />
+      <short value="Spine Error or Warning Code" />
       <min value="1" />
       <binding>
         <strength value="required" />
-        <description value="A coded expression of the type of issue" />
+        <description value="Spine error or warning code in response to a request." />
         <valueSetReference>
           <reference value="https://fhir.nhs.uk/ValueSet/spine-error-or-warning-code-1" />
         </valueSetReference>
@@ -1241,13 +1243,6 @@
       <path value="OperationOutcome.issue.details.coding" />
       <min value="1" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <description value="Spine error or warnng codes" />
-        <valueSetReference>
-          <reference value="https://fhir.nhs.uk/ValueSet/spine-error-or-warning-code-1" />
-        </valueSetReference>
-      </binding>
     </element>
     <element>
       <path value="OperationOutcome.issue.details.coding.system" />
