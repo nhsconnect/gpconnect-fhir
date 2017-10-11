@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-25T14:55:23.454+01:00" />
+    <lastUpdated value="2017-10-11T13:15:14.025+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-appointment-1" />
-  <version value="1.1.0" />
+  <version value="1.2.0" />
   <name value="GPConnect-Appointment-1" />
   <status value="active" />
   <publisher value="NHS Digital" />
@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <date value="2016-08-03T00:00:00+01:00" />
+  <date value="2017-10-13" />
   <description value="The Appointment resource provides information on the booking of a healthcare event." />
   <copyright value="Copyright © 2017 Health and Social Care Information Centre" />
   <fhirVersion value="1.0.2" />
@@ -384,6 +384,82 @@
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointment-cancellation-reason-1" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+          <valueString value="children()" />
+        </extension>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Appointment.extension" />
+      <name value="created" />
+      <short value="An extension to support the date that the appointment was initially created." />
+      <definition value="An extension to support the date that the appointment was initially created." />
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="DomainResource.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointmentcreated-1" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
+          <valueString value="children()" />
+        </extension>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element>
+      <path value="Appointment.extension" />
+      <name value="bookingOrganisation" />
+      <short value="An extension to record the organisation booking the appointment." />
+      <definition value="An extension to record the organisation booking the appointment." />
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="DomainResource.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-bookingorganisation-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3810,6 +3886,18 @@
       </base>
       <type>
         <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+      </type>
+      <type>
+        <code value="Reference" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
       </type>
       <type>
@@ -3916,7 +4004,7 @@
     <element>
       <path value="Appointment.participant.status" />
       <short value="accepted | declined | tentative | needs-action" />
-      <definition value="Participation status of the Patient." />
+      <definition value="Status of the participant" />
       <comments value="Note that FHIR strings may not exceed 1MB in size" />
       <min value="1" />
       <max value="1" />
@@ -3999,6 +4087,30 @@
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointment-cancellation-reason-1" />
+      </type>
+    </element>
+    <element>
+      <path value="Appointment.extension" />
+      <name value="created" />
+      <short value="An extension to support the date that the appointment was initially created." />
+      <definition value="An extension to support the date that the appointment was initially created." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointmentcreated-1" />
+      </type>
+    </element>
+    <element>
+      <path value="Appointment.extension" />
+      <name value="bookingOrganisation" />
+      <short value="An extension to record the organisation booking the appointment." />
+      <definition value="An extension to record the organisation booking the appointment." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-bookingorganisation-1" />
       </type>
     </element>
     <element>
@@ -4210,6 +4322,18 @@
       <min value="1" />
       <type>
         <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+      </type>
+      <type>
+        <code value="Reference" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/CareConnect-GPC-Location-1" />
       </type>
       <type>
@@ -4233,6 +4357,7 @@
     </element>
     <element>
       <path value="Appointment.participant.status" />
+      <definition value="Status of the participant" />
       <isModifier value="false" />
       <binding>
         <strength value="required" />
