@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-11T13:14:29.513+01:00" />
+    <lastUpdated value="2017-10-11T14:44:16.652+01:00" />
   </meta>
-  <url value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointmentcreated-1" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointment-created-1" />
   <version value="1.0.0" />
-  <name value="Extension-GPConnect-AppointmentCreated-1" />
+  <name value="Extension-GPConnect-Appointment-Created-1" />
   <status value="active" />
   <publisher value="NHS Digital" />
   <contact>
@@ -141,7 +141,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointmentcreated-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointment-created-1" />
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
@@ -204,7 +204,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointmentcreated-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointment-created-1" />
     </element>
     <element>
       <path value="Extension.valueDateTime" />

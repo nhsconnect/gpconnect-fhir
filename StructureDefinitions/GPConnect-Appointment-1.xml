@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-11T13:15:14.025+01:00" />
+    <lastUpdated value="2017-10-11T14:44:14.673+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/gpconnect-appointment-1" />
   <version value="1.2.0" />
@@ -421,7 +421,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointmentcreated-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointment-created-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -459,7 +459,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-bookingorganisation-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-booking-organisation-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -4094,11 +4094,10 @@
       <name value="created" />
       <short value="An extension to support the date that the appointment was initially created." />
       <definition value="An extension to support the date that the appointment was initially created." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointmentcreated-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-appointment-created-1" />
       </type>
     </element>
     <element>
@@ -4106,11 +4105,10 @@
       <name value="bookingOrganisation" />
       <short value="An extension to record the organisation booking the appointment." />
       <definition value="An extension to record the organisation booking the appointment." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-bookingorganisation-1" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-booking-organisation-1" />
       </type>
     </element>
     <element>

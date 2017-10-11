@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-11T13:14:27.402+01:00" />
+    <lastUpdated value="2017-10-11T14:44:18.509+01:00" />
   </meta>
-  <url value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-bookingorganisation-1" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-booking-organisation-1" />
   <version value="1.0.0" />
-  <name value="Extension-GPConnect-BookingOrganisation-1" />
+  <name value="Extension-GPConnect-Booking-Organisation-1" />
   <status value="active" />
   <publisher value="NHS Digital" />
   <contact>
@@ -141,7 +141,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-bookingorganisation-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-booking-organisation-1" />
       <condition value="ele-1" />
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-expression">
@@ -206,7 +206,7 @@
     </element>
     <element>
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-bookingorganisation-1" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/extension-gpconnect-booking-organisation-1" />
     </element>
     <element>
       <path value="Extension.valueReference" />
