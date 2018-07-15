@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-ListWarningCode-1"/>
+	<url value="https://fhir.nhs.uk/STU3/CodeSystem/CareConnect-ListWarningCode-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect List Warning Code"/>
+	<status value="active"/>
+	<date value="2018-05-10T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem to identify the reason a list may be incomplete."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="confidential-items"/>
+		<display value="Confidential Items"/>
+		<definition value="Items have been excluded from the returned resources due to patient consent preferences or as they are part of the exclusion dataset."/>
+	</concept>
+	<concept>
+		<code value="data-in-transit"/>
+		<display value="Data in Transit"/>
+		<definition value="This only refers to data transmitted from GP to GP when a patient moves GP practice. This is where a patient is registered at their new GP practice but their medical records from their previous GP practice has not yet been received and/or incorporated into their new GP practice system."/>
+	</concept>
+	<concept>
+		<code value="data-awaiting-filing"/>
+		<display value="Data Awaiting Filing"/>
+		<definition value="Where data exists in a provider system workflow that would have been included as part of the bundle returned had it been integrated in the system."/>
+	</concept>
+</CodeSystem>

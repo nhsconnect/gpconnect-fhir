@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-AllergyManifestation-1"/>
+	<url value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-AllergyManifestation-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Allergy Manifestation"/>
+	<status value="active"/>
+	<date value="2018-03-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A code from the SNOMED Clinical Terminology UK hierarchy with concept id '404684003' that describes a clinical finding."/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
+	<compose>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<filter>
+				<property value="concept"/>
+				<op value="in"/>
+				<value value="404684003"/>
+			</filter>
+		</include>
+	</compose>
+</ValueSet>

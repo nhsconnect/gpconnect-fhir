@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-AllergyCertainty-1"/>
+	<url value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-AllergyCertainty-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Allergy Certainty"/>
+	<status value="active"/>
+	<date value="2018-03-05T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A code from the SNOMED Clinical Terminology UK coding system that describes the certainty of an allergy."/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
+	<compose>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<filter>
+				<property value="constraint"/>
+				<op value="="/>
+				<value value="(385434005 |Improbable diagnosis| OR 2931005 |Probable diagnosis| OR 255545003 |Definite| OR 410605003 |Confirmed present|)"/>
+			</filter>
+		</include>
+	</compose>
+</ValueSet>

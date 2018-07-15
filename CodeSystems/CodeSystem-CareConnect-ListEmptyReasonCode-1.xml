@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-ListEmptyReasonCode-1"/>
+	<url value="https://fhir.nhs.uk/STU3/CodeSystem/CareConnect-ListEmptyReasonCode-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect List Empty Reason Code"/>
+	<status value="active"/>
+	<date value="2018-05-10T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem to identify the reason a list may be empty."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="no-content-recorded"/>
+		<display value="No Content Recorded"/>
+	</concept>
+</CodeSystem>

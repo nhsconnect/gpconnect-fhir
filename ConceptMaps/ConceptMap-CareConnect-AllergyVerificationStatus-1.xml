@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+	<url value="https://fhir.nhs.uk/STU3/ConceptMap/CareConnect-AllergyVerificationStatus-1"/>
+	<version value="1.0.0"/>
+	<name value="Concept Map - Allergy Verification Status"/>
+	<status value="active"/>
+	<date value="2018-03-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A Concept Map from ValueSet Allergy Verification Status to Allergy Certainity to aid interpretation."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<sourceReference>
+		<reference value="http://hl7.org/fhir/ValueSet/allergy-verification-status"/>
+	</sourceReference>
+	<targetReference>
+		<reference value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-AllergyCertainty-1"/>
+	</targetReference>
+	<group>
+		<source value="http://hl7.org/fhir/allergy-verification-status"/>
+		<target value="http://snomed.info/sct"/>
+		<element>
+			<code value="unconfirmed"/>
+			<display value="Unconfirmed"/>
+			<target>
+				<code value="385434005"/>
+				<display value="Improbable diagnosis"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="unconfirmed"/>
+			<display value="Unconfirmed"/>
+			<target>
+				<code value="2931005"/>
+				<display value="Probable diagnosis"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="confirmed"/>
+			<display value="Confirmed"/>
+			<target>
+				<code value="255545003"/>
+				<display value="Definite"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="confirmed"/>
+			<display value="Confirmed"/>
+			<target>
+				<code value="410605003"/>
+				<display value="Confirmed present"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+	</group>
+</ConceptMap>
