@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-NameUse-1"/>
+	<extension url="http://hl7.org/fhir/StructureDefinition/valueset-map">
+		<valueReference>
+			<reference value="https://fhir.nhs.uk/STU3/ConceptMap/CareConnect-PersonNameType-1"/>
+		</valueReference>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/valueset-sourceReference">
+		<valueUri value="http://hl7.org/fhir/ValueSet/name-use"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+		<valueCode value="fhir"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="0"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-ballot-status">
+		<valueString value="Informative"/>
+	</extension>
+	<url value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-NameUse-1"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113883.4.642.3.58"/>
+	</identifier>
+	<version value="3.0.1"/>
+	<name value="NameUse"/>
+	<status value="draft"/>
+	<date value="2017-04-19T07:44:47+10:00"/>
+	<publisher value="HL7 (FHIR Project)"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+	<description value="The use of a human name"/>
+	<copyright value="Copyright © HL7.org 2011+"/>
+	<compose>
+		<include>
+			<system value="http://hl7.org/fhir/name-use"/>
+			<concept>
+				<code value="usual"/>
+				<display value="Usual"/>
+			</concept>
+			<concept>
+				<code value="official"/>
+				<display value="Official"/>
+			</concept>
+			<concept>
+				<code value="temp"/>
+				<display value="Temp"/>
+			</concept>
+			<concept>
+				<code value="nickname"/>
+				<display value="Nickname"/>
+			</concept>
+			<concept>
+				<code value="anonymous"/>
+				<display value="Anonymous"/>
+			</concept>
+			<concept>
+				<code value="old"/>
+				<display value="Old"/>
+			</concept>
+			<concept>
+				<code value="maiden"/>
+				<display value="Name changed for Marraige"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>
