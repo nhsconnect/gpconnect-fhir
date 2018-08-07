@@ -428,6 +428,7 @@
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1842,7 +1843,7 @@
       <definition value="A label for the list assigned by the author." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="Allows customization beyond just the code identifying the kind of list." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="List.title" />
@@ -1880,7 +1881,7 @@
       <definition value="This code defines the purpose of the list - why it was created." />
       <comment value="If there is no code, the purpose of the list is implied where it is used, such as in a document section using Document.section.code." />
       <requirements value="Lists often contain subsets of resources rather than an exhaustive list.  The code identifies what type of subset is included." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="List.code" />
@@ -2407,7 +2408,7 @@
       <definition value="The common subject (or patient) of the resources that are in the list, if there is one." />
       <comment value="Some purely arbitrary lists do not have a common subject, so this is optional." />
       <requirements value="The primary purpose of listing the subject explicitly is to help with finding the right list." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="List.subject" />
@@ -3732,6 +3733,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -3983,6 +3985,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -4967,6 +4970,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="ListEmptyReason" />
@@ -5493,6 +5497,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-GPC-ListWarningCode-1" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="List.identifier.system">
       <path value="List.identifier.system" />
@@ -5509,8 +5514,13 @@
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Organization-1" />
       </type>
     </element>
+    <element id="List.title">
+      <path value="List.title" />
+      <min value="1" />
+    </element>
     <element id="List.code">
       <path value="List.code" />
+      <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="ListPurpose" />
@@ -5523,6 +5533,7 @@
     </element>
     <element id="List.subject">
       <path value="List.subject" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
@@ -5562,6 +5573,10 @@
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Practitioner-1" />
       </type>
     </element>
+    <element id="List.note">
+      <path value="List.note" />
+      <mustSupport value="true" />
+    </element>
     <element id="List.note.author[x]">
       <path value="List.note.author[x]" />
       <type>
@@ -5580,8 +5595,13 @@
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Practitioner-1" />
       </type>
     </element>
+    <element id="List.entry">
+      <path value="List.entry" />
+      <mustSupport value="true" />
+    </element>
     <element id="List.emptyReason">
       <path value="List.emptyReason" />
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="ListEmptyReason" />

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-05-18T12:03:12.082+01:00" />
+    <lastUpdated value="2018-08-01T15:23:31.515+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-GPC-PrescribingAgency-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="Extension-CareConnect-GPC-PrescribingAgency-1" />
   <status value="active" />
   <date value="2018-05-10T15:44:33.398+01:00" />
@@ -200,6 +200,12 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <binding>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-PrescribingAgency-1" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -229,6 +235,12 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-PrescribingAgency-1" />
+        </valueSetReference>
+      </binding>
     </element>
   </differential>
 </StructureDefinition>
