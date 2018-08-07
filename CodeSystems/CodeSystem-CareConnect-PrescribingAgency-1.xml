@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-PrescribingAgency-1"/>
+	<url value="https://fhir.nhs.uk/STU3/CodeSystem/CareConnect-PrescribingAgency-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Prescribing Agency"/>
+	<status value="active"/>
+	<date value="2018-08-01T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem to identify the prescribing agency."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="prescribed-at-gp-practice"/>
+		<display value="Prescribed at GP practice"/>
+	</concept>
+	<concept>
+		<code value="prescribed-by-another-organisation"/>
+		<display value="Prescribed by another organisation"/>
+	</concept>
+</CodeSystem>
