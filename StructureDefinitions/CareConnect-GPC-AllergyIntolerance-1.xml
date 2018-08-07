@@ -1657,6 +1657,8 @@
     <element id="AllergyIntolerance.identifier.type.extension">
       <path value="AllergyIntolerance.identifier.type.extension" />
       <slicing>
+        <discriminator>
+          <type value="value" />
           <path value="url" />
         </discriminator>
         <description value="Extensions are always sliced by (at least) url" />
