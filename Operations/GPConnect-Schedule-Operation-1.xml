@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OperationDefinition xmlns="http://hl7.org/fhir">
+	<id value="GPConnect-Schedule-Operation-1"/>
+	<meta>
+		<lastUpdated value="2018-01-25T00:00:00+01:00"/>
+	</meta>
+	<url value="https://fhir.nhs.uk/STU3/OperationDefinition/GPConnect-Schedule-Operation-1"/>
+	<version value="1.0.0"/>
+	<name value="GPConnect-Schedule-Operation"/>
+	<status value="draft"/>
+	<kind value="operation"/>
+	<date value="2018-01-25"/>
+	<publisher value="NHS Digital"/>
+	<contact>
+		<name value="Interoperability Team"/>
+		<telecom>
+			<system value="email"/>
+			<value value="interoperabilityteam@nhs.net"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<description value="Request to retrieve the schedules available for a healthcare organisation"/>
+	<code value="gpc.getschedule"/>
+	<resource value="Organization"/>
+	<system value="false"/>
+	<type value="true"/>
+	<instance value="true"/>
+		<parameter>
+		<name value="timePeriod"/>
+		<use value="in"/>
+		<min value="1"/>
+		<max value="1"/>
+		<documentation value="The time period for the requested information"/>
+		<type value="Period"/>
+	</parameter>
+	<parameter>
+		<name value="searchFilter"/>
+		<use value="in"/>
+		<min value="0"/>
+		<max value="*"/>
+		<documentation value="To pass a disposition code as a filter to search for free slots"/>
+		<type value="CodeableConcept"/>
+	</parameter>
+	<parameter>
+		<name value="response"/>
+		<use value="out"/>
+		<min value="1"/>
+		<max value="1"/>
+		<documentation value="The searchset bundle resource that has been returned in response to the given input parameters"/>
+		<type value="Bundle"/>
+		<profile>
+			<reference value="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Searchset-Bundle-1"/>
+		</profile>
+	</parameter>
+</OperationDefinition>

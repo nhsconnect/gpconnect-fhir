@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="GPConnect-RecordSection-1"/>
+	<url value="https://fhir.nhs.uk/STU3/CodeSystem/GPConnect-RecordSection-1"/>
+	<version value="1.0.0"/>
+	<name value="GPConnect-RecordSection"/>
+	<status value="draft"/>
+	<date value="2018-01-24T00:00:00+00:00"/>
+	<publisher value="NHS Digital"/>
+	<contact>
+		<name value="Interoperability Team"/>
+		<telecom>
+			<system value="email"/>
+			<value value="interoperabilityteam@nhs.net"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<description value="A CodeSystem that contains a set of codes to classify a section of a composition/document."/>
+	<copyright value="Copyright © 2017 NHS Digital"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="ADM"/>
+		<display value="Administrative Items"/>
+	</concept>
+	<concept>
+		<code value="ALG"/>
+		<display value="Allergies and Intolerance"/>
+	</concept>
+	<concept>
+		<code value="CLI"/>
+		<display value="Clinical Items"/>
+	</concept>
+	<concept>
+		<code value="ENC"/>
+		<display value="Encounters"/>
+	</concept>
+	<concept>
+		<code value="IMM"/>
+		<display value="Immunisations"/>
+	</concept>
+	<concept>
+		<code value="INV"/>
+		<display value="Investigations"/>
+	</concept>
+	<concept>
+		<code value="MED"/>
+		<display value="Medications"/>
+	</concept>
+	<concept>
+		<code value="OBS"/>
+		<display value="Observations"/>
+	</concept>
+	<concept>
+		<code value="PAT"/>
+		<display value="Patient Details"/>
+	</concept>
+	<concept>
+		<code value="PRB"/>
+		<display value="Problems"/>
+	</concept>
+	<concept>
+		<code value="REF"/>
+		<display value="Referrals"/>
+	</concept>
+	<concept>
+		<code value="SUM"/>
+		<display value="Summary"/>
+	</concept>
+</CodeSystem>

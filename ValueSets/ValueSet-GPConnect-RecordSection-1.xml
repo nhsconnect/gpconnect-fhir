@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="GPConnect-RecordSection-1"/>
+	<url value="https://fhir.nhs.uk/STU3/ValueSet/GPConnect-RecordSection-1"/>
+	<version value="1.0.0"/>
+	<name value="GPConnect-RecordSection-1"/>
+	<status value="draft"/>
+	<date value="2018-01-24T00:00:00+00:00"/>
+	<publisher value="NHS Digital"/>
+	<contact>
+		<name value="Interoperability Team"/>
+		<telecom>
+			<system value="email"/>
+			<value value="interoperabilityteam@nhs.net"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<description value="A ValueSet that contains a set of codes to classify a section of a composition/document."/>
+	<copyright value="Copyright © 2017 NHS Digital"/>
+	<compose>
+		<include>
+			<system value="https://fhir.nhs.uk/STU3/CodeSystem/GPConnect-RecordSection-1"/>
+		</include>
+	</compose>
+</ValueSet>
