@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-09-19T08:47:14.103+01:00" />
+    <lastUpdated value="2018-09-21T11:52:49.056+01:00" />
   </meta>
-  <url value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-PractitionerRole-1" />
-  <version value="1.2.0" />
-  <name value="Extension-GPConnect-PractitionerRole-1" />
+  <url value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-DeliveryChannel-2" />
+  <version value="1.0.0" />
+  <name value="Extension-GPConnect-DeliveryChannel-2" />
   <status value="active" />
-  <date value="2018-02-22T09:57:42.83+00:00" />
+  <date value="2018-09-21" />
   <publisher value="NHS Digital" />
   <contact>
     <name value="Interoperability Team" />
@@ -17,13 +17,13 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An extension to record the role of the Practitioner of a scheduled Appointment." />
+  <description value="An extension to record the delivery channel of a scheduled Appointment." />
   <copyright value="Copyright © 2018 NHS Digital" />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="Schedule" />
+  <context value="Slot" />
   <context value="Appointment" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -31,10 +31,10 @@
   <snapshot>
     <element id="Extension">
       <path value="Extension" />
-      <short value="An extension to record the role of the Practitioner of a scheduled Appointment" />
-      <definition value="An extension to record the role of the Practitioner of a scheduled Appointment." />
+      <short value="An extension to record the delivery channel of a scheduled Appointment" />
+      <definition value="An extension to record the delivery channel of a scheduled Appointment." />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Element" />
         <min value="0" />
@@ -158,7 +158,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-PractitionerRole-1" />
+      <fixedUri value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-DeliveryChannel-2" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -176,11 +176,11 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.valueCodeableConcept:valueCodeableConcept">
-      <path value="Extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <short value="To identify the Practitioner of a scheduled Appointment." />
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
+    <element id="Extension.value[x]:valueCode">
+      <path value="Extension.valueCode" />
+      <sliceName value="valueCode" />
+      <short value="The delivery channel of the Appointment" />
+      <definition value="The delivery channel of the Appointment." />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="0" />
       <max value="1" />
@@ -190,7 +190,7 @@
         <max value="1" />
       </base>
       <type>
-        <code value="CodeableConcept" />
+        <code value="code" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -202,9 +202,9 @@
       </constraint>
       <binding>
         <strength value="extensible" />
-        <description value="A ValueSet that contains a set of codes that identify the Practitioner of a scheduled Appointment." />
+        <description value="A ValueSet that identifies the delivery channel of an Appointment." />
         <valueSetReference>
-          <reference value="https://fhir.nhs.uk/STU3/ValueSet/GPConnect-PractitionerRole-1" />
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/GPConnect-DeliveryChannel-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -220,25 +220,27 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="An extension to record the role of the Practitioner of a scheduled Appointment" />
-      <definition value="An extension to record the role of the Practitioner of a scheduled Appointment." />
+      <short value="An extension to record the delivery channel of a scheduled Appointment" />
+      <definition value="An extension to record the delivery channel of a scheduled Appointment." />
+      <max value="1" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-PractitionerRole-1" />
+      <fixedUri value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-DeliveryChannel-2" />
     </element>
-    <element id="Extension.valueCodeableConcept:valueCodeableConcept">
-      <path value="Extension.valueCodeableConcept" />
-      <sliceName value="valueCodeableConcept" />
-      <short value="To identify the Practitioner of a scheduled Appointment." />
+    <element id="Extension.value[x]:valueCode">
+      <path value="Extension.valueCode" />
+      <sliceName value="valueCode" />
+      <short value="The delivery channel of the Appointment" />
+      <definition value="The delivery channel of the Appointment." />
       <type>
-        <code value="CodeableConcept" />
+        <code value="code" />
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="A ValueSet that contains a set of codes that identify the Practitioner of a scheduled Appointment." />
+        <description value="A ValueSet that identifies the delivery channel of an Appointment." />
         <valueSetReference>
-          <reference value="https://fhir.nhs.uk/STU3/ValueSet/GPConnect-PractitionerRole-1" />
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/GPConnect-DeliveryChannel-1" />
         </valueSetReference>
       </binding>
     </element>

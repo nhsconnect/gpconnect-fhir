@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-02-22T10:36:26.778+00:00" />
+    <lastUpdated value="2018-09-19T08:49:13.002+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-DeliveryChannel-1" />
-  <version value="1.0.0" />
+  <version value="1.2.0" />
   <name value="Extension-GPConnect-DeliveryChannel-1" />
   <status value="active" />
   <date value="2018-02-22T10:12:57.879+00:00" />
@@ -23,7 +23,8 @@
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
-  <context value="Schedule" />
+  <context value="Slot" />
+  <context value="Appointment" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -175,7 +176,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="The delivery channel of the Appointment" />
@@ -227,7 +228,7 @@
       <path value="Extension.url" />
       <fixedUri value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-GPConnect-DeliveryChannel-1" />
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="The delivery channel of the Appointment" />
