@@ -2,10 +2,10 @@
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-ListCode-1"/>
 	<url value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-ListCode-1"/>
-	<version value="1.0.0"/>
+	<version value="1.1.0"/>
 	<name value="Care Connect List Code"/>
 	<status value="active"/>
-	<date value="2018-05-10T00:00:00+00:00"/>
+	<date value="2018-10-19T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A ValueSet to identify the purpose of a list."/>
 	<copyright value="Copyright © 2016 HL7 UK"/>
@@ -30,8 +30,20 @@
 			</concept>
 			<concept>
 				<code value="886921000000105"/>
-				<display value="Allergies and adverse reaction"/>
-			</concept>			
+				<display value="Allergies and adverse reactions"/>
+			</concept>
+			<concept>
+				<code value="1102411000000102"/>
+				<display value="Active medications"/>
+			</concept>
+			<concept>
+				<code value="1102191000000100"/>
+				<display value="Discontinued medications"/>
+			</concept>
+			<concept>
+				<code value="1103671000000101"/>
+				<display value="Ended allergies"/>
+			</concept>
 		</include>
 	</compose>
 </ValueSet>
