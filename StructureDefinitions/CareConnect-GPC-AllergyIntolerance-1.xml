@@ -7,7 +7,7 @@
     <valueCode value="pc" />
   </extension>
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-AllergyIntolerance-1" />
-  <version value="1.2.0" />
+  <version value="1.3.0" />
   <name value="CareConnect-GPC-AllergyIntolerance-1" />
   <status value="active" />
   <date value="2017-07-13T08:24:34.7834577+01:00" />
@@ -2645,7 +2645,7 @@
       <sliceName value="crossCareSettingIdentifier" />
       <short value="External ids for this item" />
       <definition value="This records identifiers associated with this allergy/intolerance concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="AllergyIntolerance.identifier" />
@@ -10452,7 +10452,6 @@
     <element id="AllergyIntolerance.identifier:crossCareSettingIdentifier">
       <path value="AllergyIntolerance.identifier" />
       <sliceName value="crossCareSettingIdentifier" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="AllergyIntolerance.identifier:crossCareSettingIdentifier.system">

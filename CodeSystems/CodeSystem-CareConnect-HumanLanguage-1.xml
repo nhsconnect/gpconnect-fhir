@@ -2,10 +2,10 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-HumanLanguage-1"/>
 	<url value="https://fhir.nhs.uk/STU3/CodeSystem/CareConnect-HumanLanguage-1"/>
-	<version value="1.0.0"/>
+	<version value="1.1.0"/>
 	<name value="Care Connect Human Language"/>
 	<status value="active"/>
-	<date value="2017-11-22T00:00:00+00:00"/>
+	<date value="2019-03-01T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A CodeSystem that identifies the language used by a person."/>
 	<copyright value="Copyright © 2016 HL7 UK"/>
@@ -109,7 +109,7 @@
 	</concept>
 	<concept>
 		<code value="bh"/>
-		<display value="Bihari"/>
+		<display value="Bihari languages"/>
 	</concept>
 	<concept>
 		<code value="bi"/>
@@ -321,7 +321,7 @@
 	</concept>
 	<concept>
 		<code value="ii"/>
-		<display value="Sichuan Yi"/>
+		<display value="Sichuan Yi; Nuosu"/>
 	</concept>
 	<concept>
 		<code value="iu"/>
@@ -329,7 +329,7 @@
 	</concept>
 	<concept>
 		<code value="ie"/>
-		<display value="Interlingue"/>
+		<display value="Interlingue; Occidental"/>
 	</concept>
 	<concept>
 		<code value="ia"/>
@@ -480,10 +480,6 @@
 		<display value="Maltese"/>
 	</concept>
 	<concept>
-		<code value="mo"/>
-		<display value="Moldavian"/>
-	</concept>
-	<concept>
 		<code value="mn"/>
 		<display value="Mongolian"/>
 	</concept>
@@ -529,7 +525,7 @@
 	</concept>
 	<concept>
 		<code value="oc"/>
-		<display value="Occitan (post1500); Provencal"/>
+		<display value="Occitan (post1500)"/>
 	</concept>
 	<concept>
 		<code value="oj"/>
@@ -565,7 +561,7 @@
 	</concept>
 	<concept>
 		<code value="ps"/>
-		<display value="Pushto"/>
+		<display value="Pushto; Pashto"/>
 	</concept>
 	<concept>
 		<code value="qu"/>
@@ -577,7 +573,7 @@
 	</concept>
 	<concept>
 		<code value="ro"/>
-		<display value="Romanian"/>
+		<display value="Romanian; Moldavian; Moldovan"/>
 	</concept>
 	<concept>
 		<code value="rn"/>
