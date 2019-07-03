@@ -2,11 +2,11 @@
 <OperationDefinition xmlns="http://hl7.org/fhir">
 	<id value="GPConnect-GetStructuredRecord-Operation-1"/>
 	<url value="https://fhir.nhs.uk/STU3/OperationDefinition/GPConnect-GetStructuredRecord-Operation-1"/>
-	<version value="1.8.0"/>
+	<version value="1.9.0"/>
 	<name value="GPConnect-GetStructuredRecord-Operation"/>
 	<status value="draft"/>
 	<kind value="operation"/>
-	<date value="2019-01-16"/>
+	<date value="2019-06-26"/>
 	<publisher value="NHS Digital"/>
 	<contact>
 		<name value="Interoperability Team"/>
@@ -77,5 +77,81 @@
 		<profile>
 			<reference value="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-StructuredRecord-Bundle-1"/>
 		</profile>
+	</parameter>
+	<parameter>
+		<name value="includeConsultations"/>
+		<use value="in"/>
+		<min value="0"/>
+		<max value="1"/>
+		<documentation value="Include consultations in the response."/>
+		<part>
+			<name value="consultationSearchPeriod"/>
+			<use value="in"/>
+			<min value="0"/>
+			<max value="1"/>
+			<documentation value="Restrict consultations by defining a time period"/>
+			<type value="Period"/>
+		</part>
+		<part>
+			<name value="includeNumberOfMostRecent"/>
+			<use value="in"/>
+			<min value="0"/>
+			<max value="1"/>
+			<documentation value="Limit the number of returned consultations"/>
+			<type value="integer"/>
+		</part>
+	</parameter>
+	<parameter>
+		<name value="includeProblems"/>
+		<use value="in"/>
+		<min value="0"/>
+		<max value="1"/>
+		<documentation value="Include problems in the response."/>
+		<part>
+			<name value="includeStatus"/>
+			<use value="in"/>
+			<min value="0"/>
+			<max value="1"/>
+			<documentation value="Restrict the problems that are returned by their clinical status"/>
+			<type value="code"/>
+			<binding>
+				<strength value="required"/>
+				<valueSetUri value="http://hl7.org/fhir/ValueSet/condition-clinical"/>
+			</binding>
+		</part>
+		<part>
+			<name value="includeSignificance"/>
+			<use value="in"/>
+			<min value="0"/>
+			<max value="1"/>
+			<documentation value="Restrict the problems that are returned by their clinical significance"/>
+			<type value="CodeableConcept"/>
+			<binding>
+				<strength value="required"/>
+				<valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ProblemSignificance-1"/>
+			</binding>
+		</part>
+	</parameter>
+	<parameter>
+		<name value="includeImmunisations"/>
+		<use value="in"/>
+		<min value="0"/>
+		<max value="1"/>
+		<documentation value="Include immunisations in the response"/>
+	</parameter>
+	<parameter>
+		<name value="includeUncategorisedData"/>
+		<use value="in"/>
+		<min value="0"/>
+		<max value="1"/>
+		<documentation value="Include uncategorised data in the response."/>
+		<part>
+			<name value="uncategorisedDataSearchPeriod"/>
+			<use value="in"/>
+			<min value="0"/>
+			<max value="1"/>
+			<documentation value="Restrict uncategorised data by defining a time period"/>
+			<type value="Period"/>
+		</part>
 	</parameter>
 </OperationDefinition>
