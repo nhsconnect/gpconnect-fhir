@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ValueSet xmlns="http://hl7.org/fhir">
+   <id value="CareConnect-ListCode-1"/>
+   <url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ListCode-1"/>
+   <version value="1.3.0"/>
+   <name value="Care Connect List Code"/>
+   <status value="draft"/>
+   <date value="2019-06-27T20:30:00+00:00"/>
+   <publisher value="HL7 UK"/>
+   <description value="A ValueSet to identify the purpose of a list."/>
+   <copyright value="Copyright © 2019 HL7 UK"/>
+   <compose>
+      <include>
+         <system value="http://snomed.info/sct"/>
+         <concept>
+            <code value="887161000000102"/>
+            <display value="Diagnoses"/>
+         </concept>
+         <concept>
+            <code value="887171000000109"/>
+            <display value="Procedures"/>
+         </concept>
+         <concept>
+            <code value="717711000000103"/>
+            <display value="Problems"/>
+         </concept>
+         <concept>
+            <code value="933361000000108"/>
+            <display value="Medications and medical devices"/>
+         </concept>
+         <concept>
+            <code value="886921000000105"/>
+            <display value="Allergies and adverse reactions"/>
+         </concept>
+         <concept>
+            <code value="1102411000000102"/>
+            <display value="Active medications"/>
+         </concept>
+         <concept>
+            <code value="1102191000000100"/>
+            <display value="Discontinued medications"/>
+         </concept>
+         <concept>
+            <code value="1103671000000101"/>
+            <display value="Ended allergies"/>
+         </concept>
+         <concept>
+            <code value="325851000000107"/>
+            <display value="Consultation"/>
+         </concept>
+         <concept>
+            <code value="25851000000105"/>
+            <display value="Topic (EHR)"/>
+         </concept>
+         <concept>
+            <code value="24781000000107"/>
+            <display value="Category (EHR)"/>
+         </concept>
+      </include>
+   </compose>
+</ValueSet>
