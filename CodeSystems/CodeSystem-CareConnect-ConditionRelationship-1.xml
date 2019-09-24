@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="CareConnect-ConditionRelationship-1"/>
+   <url value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionRelationship-1"/>
+   <version value="1.1.0"/>
+   <name value="Care Connect Condition Relationship"/>
+   <status value="draft"/>
+   <date value="2019-09-04T14:33:00+00:00"/>
+   <publisher value="HL7 UK"/>
+   <description value="A CodeSystem that identifies the kind of relationship that exists with a target condition or problem."/>
+   <copyright value="Copyright © 2016 HL7 UK"/>
+   <caseSensitive value="true"/>
+   <content value="complete"/>
+   <concept>
+      <code value="merge-combine"/>
+      <display value="Merge/Combine"/>
+      <definition value="This condition is merged/combined with the target condition to form a single logical condition."/>
+   </concept>
+   <concept>
+      <code value="nesting"/>
+      <display value="Nesting"/>
+      <definition value="This target condition is a component problem of this condition."/>
+   </concept>
+   <concept>
+      <code value="evolve"/>
+      <display value="Evolve"/>
+      <definition value="This condition has evolved from the target condition."/>
+   </concept>
+   <concept>
+      <code value="parent"/>
+      <display value="Parent"/>
+      <definition value="The problem referenced is the parent of the problem/item in the resource."/>
+   </concept>
+   <concept>
+      <code value="child "/>
+      <display value="Child "/>
+      <definition value="The problem referenced is the child of the problem/item in the resource."/>
+   </concept>
+   <concept>
+      <code value="sibling "/>
+      <display value="Sibling "/>
+      <definition value="The problem referenced is a sibling of the problem/item in the resource."/>
+   </concept>
+</CodeSystem>
