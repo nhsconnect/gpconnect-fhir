@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="GPConnect-RequestPriority-1"/>
+	<extension url="http://hl7.org/fhir/StructureDefinition/valueset-map">
+		<valueReference>
+			<reference value="https://fhir.nhs.uk/STU3/ConceptMap/GPConnect-RequestPriority-1"/>
+		</valueReference>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/valueset-sourceReference">
+		<valueUri value="http://hl7.org/fhir/ValueSet/request-priority"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+		<valueCode value="pc"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="3"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-ballot-status">
+		<valueString value="Informative"/>
+	</extension>
+	<url value="https://fhir.nhs.uk/STU3/ValueSet/GPConnect-RequestPriority-1"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113883.4.642.3.106"/>
+	</identifier>
+	<version value="3.0.1"/>
+	<name value="RequestPriority"/>
+	<status value="draft"/>
+	<date value="2019-08-28T18:50:47+10:00"/>
+	<publisher value="HL7 (FHIR Project)"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+	<description value="The clinical urgency of the referral."/>
+	<copyright value="Copyright © HL7.org 2011+"/>
+	<compose>
+		<include>
+			<system value="http://hl7.org/fhir/request-priority"/>
+			<concept>
+				<code value="routine"/>
+				<display value="Routine"/>
+			</concept>
+			<concept>
+				<code value="urgent"/>
+				<display value="Urgent"/>
+			</concept>
+			<concept>
+				<code value="asap"/>
+				<display value="ASAP"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+	<url value="https://fhir.nhs.uk/STU3/ConceptMap/GPConnect-RequestPriority-1"/>
+	<version value="1.0.0"/>
+	<name value="Concept Map - GPConnect Request Priority"/>
+	<status value="draft"/>
+	<date value="2019-08-28T18:50:47+10:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A Concept Map from the HL7 FHIR ValueSet RequestPriority to GPConnect Referral Urgency to aid interpretation."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<sourceReference>
+		<reference value="https://fhir.nhs.uk/STU3/ValueSet/GPConnect-RequestPriority-1"/>
+	</sourceReference>
+	<targetReference>
+		<reference value="https://fhir.nhs.uk/STU3/ValueSet/GPConnect-ReferralUrgency-1"/>
+	</targetReference>
+	<group>
+		<source value="http://hl7.org/fhir/request-priority"/>
+		<target value="https://fhir.nhs.uk/STU3/CodeSystem/GPConnect-ReferralUrgency-1"/>
+		<element>
+			<code value="routine"/>
+			<display value="Routine"/>
+			<target>
+				<code value="1"/>
+				<display value="Routine"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="urgent"/>
+			<display value="Urgent"/>
+			<target>
+				<code value="2"/>
+				<display value="Urgent"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="asap"/>
+			<display value="ASAP"/>
+			<target>
+				<code value="3"/>
+				<display value="ASAP (2 Week Wait)"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+	</group>
+</ConceptMap>
