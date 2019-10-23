@@ -1,0 +1,164 @@
+<MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../Schemas/messagedefinition.xsd">
+  <meta>
+    <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageDefinition-1" />
+  </meta>
+  <url value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-Instance-1" />
+  <identifier>
+    <system value="https://tools.ietf.org/html/rfc4122" />
+    <value value="425b5f3a-faf0-469f-a2dc-5f716a777e02" />
+  </identifier>
+  <version value="1.1.0" />
+  <title value="GP Connect Send Document Message Definition" />
+  <status value="active" />
+  <date value="2019-07-10T00:00:00+00:00" />
+  <event>
+    <system value="https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2" />
+    <code value="ITK007C" />
+    <display value="ITK GP Connect Send Document" />
+  </event>
+  <category value="Notification" />
+  <focus>
+    <code value="Bundle" />
+    <profile>
+      <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ITK-BundledAssets-1">
+        <!-- to allow STU3 ITK-Document-Bundle-1 to be used in the payload -->
+        <extension url="utilisedAsset">
+          <extension url="type">
+            <valueCode value="StructureDefinition" />
+          </extension>
+          <extension url="reference">
+            <valueReference>
+              <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1" />
+            </valueReference>
+          </extension>
+          <extension url="version">
+            <valueString value="1.1.0" />
+          </extension>
+        </extension>
+		<!-- to allow STU3 CareConnect-Composition-1 to be used in the payload -->
+        <extension url="utilisedAsset">
+          <extension url="type">
+            <valueCode value="StructureDefinition" />
+          </extension>
+          <extension url="reference">
+            <valueReference>
+              <reference value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1" />
+            </valueReference>
+          </extension>
+          <extension url="version">
+            <valueString value="1.2.0" />
+          </extension>
+        </extension>
+        <!-- to allow STU3 CareConnect-Patient-1 to be used in the payload -->
+        <extension url="utilisedAsset">
+          <extension url="type">
+            <valueCode value="StructureDefinition" />
+          </extension>
+          <extension url="reference">
+            <valueReference>
+              <reference value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
+            </valueReference>
+          </extension>
+          <extension url="version">
+            <valueString value="1.3.0" />
+          </extension>
+        </extension>
+        <!-- to allow STU3 CareConnect-Practitioner-1 to be used in the payload -->
+        <extension url="utilisedAsset">
+          <extension url="type">
+            <valueCode value="StructureDefinition" />
+          </extension>
+          <extension url="reference">
+            <valueReference>
+              <reference value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
+            </valueReference>
+          </extension>
+          <extension url="version">
+            <valueString value="1.1.0" />
+          </extension>
+        </extension>
+        <!-- to allow STU3 CareConnect-Organization-1 to be used in the payload -->
+        <extension url="utilisedAsset">
+          <extension url="type">
+            <valueCode value="StructureDefinition" />
+          </extension>
+          <extension url="reference">
+            <valueReference>
+              <reference value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
+            </valueReference>
+          </extension>
+          <extension url="version">
+            <valueString value="1.1.0" />
+          </extension>
+        </extension>
+        <!-- To allow STU3 ITK-Attachment-Binary-1 to be used in the payload -->
+        <extension url="utilisedAsset">
+          <extension url="type">
+            <valueCode value="StructureDefinition" />
+          </extension>
+          <extension url="reference">
+            <valueReference>
+              <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1" />
+            </valueReference>
+          </extension>
+          <extension url="version">
+            <valueString value="1.1.0" />
+          </extension>
+        </extension>
+        <!-- to allow SNOMED CT to be used in the payload -->
+        <extension url="utilisedAsset">
+          <extension url="type">
+            <valueCode value="CodeSystem" />
+          </extension>
+          <extension url="reference">
+            <valueReference>
+              <reference value="http://snomed.info/sct" />
+            </valueReference>
+          </extension>
+          <extension url="version">
+            <valueString value="latest release" />
+          </extension>
+        </extension>
+        <!-- to allow for any code system used in payload -->
+        <extension url="utilisedAsset">
+          <extension url="type">
+            <valueCode value="CodeSystem" />
+          </extension>
+          <extension url="reference">
+            <valueReference>
+              <reference value="https://fhir.nhs.uk/STU3/CodeSystem/any" />
+            </valueReference>
+          </extension>
+          <extension url="version">
+            <valueString value="any" />
+          </extension>
+        </extension>
+        <!-- to allow any concept map to be used in the payload -->
+        <extension url="utilisedAsset">
+          <extension url="type">
+            <valueCode value="ConceptMap" />
+          </extension>
+          <extension url="reference">
+            <valueReference>
+              <reference value="https://fhir.nhs.uk/STU3/ConceptMap/any" />
+            </valueReference>
+          </extension>
+          <extension url="version">
+            <valueString value="any" />
+          </extension>
+        </extension>
+      </extension>
+      <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1" />
+    </profile>
+  </focus>
+  <allowedResponse>
+    <message>
+      <reference value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-BusAck-MessageDefinition-1" />
+    </message>
+  </allowedResponse>
+  <allowedResponse>
+    <message>
+      <reference value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-InfAck-MessageDefinition-1" />
+    </message>
+  </allowedResponse>
+</MessageDefinition>
