@@ -2,7 +2,7 @@
   <meta>
     <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageDefinition-1" />
   </meta>
-  <url value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-Instance-1" />
+  <url value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-1" />
   <identifier>
     <system value="https://tools.ietf.org/html/rfc4122" />
     <value value="425b5f3a-faf0-469f-a2dc-5f716a777e02" />
