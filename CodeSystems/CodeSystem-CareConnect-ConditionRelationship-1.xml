@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><CodeSystem xmlns="http://hl7.org/fhir">
    <id value="CareConnect-ConditionRelationship-1"/>
    <url value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionRelationship-1"/>
-   <version value="1.1.0"/>
+   <version value="1.2.0"/>
    <name value="Care Connect Condition Relationship"/>
    <status value="draft"/>
-   <date value="2019-09-04T14:33:00+00:00"/>
+   <date value="2019-10-24T18:50:00+00:00"/>
    <publisher value="HL7 UK"/>
    <description value="A CodeSystem that identifies the kind of relationship that exists with a target condition or problem."/>
-   <copyright value="Copyright © 2016 HL7 UK"/>
+   <copyright value="Copyright © 2019 HL7 UK"/>
    <caseSensitive value="true"/>
    <content value="complete"/>
    <concept>
@@ -31,13 +31,13 @@
       <definition value="The problem referenced is the parent of the problem/item in the resource."/>
    </concept>
    <concept>
-      <code value="child "/>
-      <display value="Child "/>
+      <code value="child"/>
+      <display value="Child"/>
       <definition value="The problem referenced is the child of the problem/item in the resource."/>
    </concept>
    <concept>
-      <code value="sibling "/>
-      <display value="Sibling "/>
+      <code value="sibling"/>
+      <display value="Sibling"/>
       <definition value="The problem referenced is a sibling of the problem/item in the resource."/>
    </concept>
 </CodeSystem>
