@@ -15,7 +15,7 @@
       </telecom>
    </contact>
    <description value="Enhanced quantity data type that supports an approximation indicator."/>
-   <copyright value="Copyright © 2019 HL7 UK Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.  HL7® FHIR® standard Copyright © 2011+ HL7  The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html"/>
+   <copyright value="Copyright © 2019 HL7 UK Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.  HL7® FHIR® standard Copyright © 2011+ HL7  The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html"/>
    <fhirVersion value="3.0.1"/>
    <kind value="complex-type"/>
    <abstract value="false"/>
@@ -60,7 +60,7 @@
          </mapping>
          <mapping>
             <identity value="rim"/>
-            <map value="PQ, IVL<PQ>, MO, CO, depending on the values"/>
+            <map value="PQ, IVL&lt;PQ&gt;, MO, CO, depending on the values"/>
          </mapping>
       </element>
       <element id="Quantity.id">
@@ -224,10 +224,10 @@
       </element>
       <element id="Quantity.comparator">
          <path value="Quantity.comparator"/>
-         <short value="< | <= | >= | > - how to understand the value"/>
-         <definition value="How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "<" , then the real value is < stated value."/>
-         <comment value="This is labeled as "Is Modifier" because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value."/>
-         <requirements value="Need a framework for handling measures where the value is <5ug/L or >400mg/L due to the limitations of measuring methodology."/>
+         <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value"/>
+         <definition value="How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is &quot;&lt;&quot; , then the real value is &lt; stated value."/>
+         <comment value="This is labeled as &quot;Is Modifier&quot; because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value."/>
+         <requirements value="Need a framework for handling measures where the value is &lt;5ug/L or &gt;400mg/L due to the limitations of measuring methodology."/>
          <min value="0"/>
          <max value="1"/>
          <base>
