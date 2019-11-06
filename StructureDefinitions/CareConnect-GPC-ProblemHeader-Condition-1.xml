@@ -7,10 +7,10 @@
     <valueCode value="pc" />
   </extension>
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-ProblemHeader-Condition-1" />
-  <version value="1.1.0" />
+  <version value="1.2.0" />
   <name value="CareConnect-GPC-ProblemHeader-Condition-1" />
   <status value="draft" />
-  <date value="2019-08-28" />
+  <date value="2019-10-24" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -109,7 +109,7 @@
       <short value="Logical id of this artifact" />
       <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Resource.id" />
@@ -6864,7 +6864,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value=" Problem List Item" />
+      <fixedString value="Problem List Item" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -12262,10 +12262,6 @@
     </element>
   </snapshot>
   <differential>
-    <element id="Condition.id">
-      <path value="Condition.id" />
-      <min value="1" />
-    </element>
     <element id="Condition.meta.profile">
       <path value="Condition.meta.profile" />
       <min value="1" />
@@ -12886,7 +12882,7 @@
       </extension>
       <path value="Condition.category.coding.display" />
       <min value="1" />
-      <fixedString value=" Problem List Item" />
+      <fixedString value="Problem List Item" />
     </element>
     <element id="Condition.code">
       <path value="Condition.code" />
