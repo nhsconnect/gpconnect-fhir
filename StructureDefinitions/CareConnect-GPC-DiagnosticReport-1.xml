@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-DiagnosticReport-1" />
-  <version value="1.1.0" />
+  <version value="1.2.0" />
   <name value="CareConnect-GPC-DiagnosticReport-1" />
   <status value="draft" />
-  <date value="2019-08-28" />
+  <date value="2019-11-04" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -96,7 +96,7 @@
       <short value="Logical id of this artifact" />
       <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Resource.id" />
@@ -5086,6 +5086,7 @@
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -5384,6 +5385,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -8007,7 +8009,7 @@
       <requirements value="Links the request to the Encounter context." />
       <alias value="Encounter" />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="DiagnosticReport.context" />
         <min value="0" />
@@ -8015,7 +8017,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1" />
+        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Encounter-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -8261,7 +8263,7 @@
       <alias value="Effective Time" />
       <alias value="Occurrence" />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="DiagnosticReport.effective[x]" />
         <min value="0" />
@@ -8375,6 +8377,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -9332,6 +9335,7 @@
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -9582,6 +9586,7 @@
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -9798,7 +9803,7 @@
       <definition value="One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images." />
       <comment value="ImagingStudy and ImageManifest and the image element are somewhat overlapping - typically, the list of image references in the image element will also be found in one of the imaging study resources. However each caters to different types of displays for different types of purposes. Neither, either, or both may be provided." />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="DiagnosticReport.imagingStudy" />
         <min value="0" />
@@ -10042,7 +10047,7 @@
       <alias value="Slides" />
       <alias value="Scans" />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="DiagnosticReport.image" />
         <min value="0" />
@@ -10491,6 +10496,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -10527,6 +10533,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="AdjunctDiagnosis" />
@@ -11694,7 +11701,7 @@
       <comment value="&quot;application/pdf&quot; is recommended as the most reliable and interoperable in this context." />
       <requirements value="Gives laboratory the ability to provide its own fully formatted report for clinical fidelity." />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="DiagnosticReport.presentedForm" />
         <min value="0" />
@@ -12149,10 +12156,6 @@
     </element>
   </snapshot>
   <differential>
-    <element id="DiagnosticReport.id">
-      <path value="DiagnosticReport.id" />
-      <min value="1" />
-    </element>
     <element id="DiagnosticReport.meta.profile">
       <path value="DiagnosticReport.meta.profile" />
       <min value="1" />
@@ -12215,9 +12218,11 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-ProcedureRequest-1" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.category">
       <path value="DiagnosticReport.category" />
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="DiagnosticServiceSection" />
@@ -12358,19 +12363,18 @@
     </element>
     <element id="DiagnosticReport.context">
       <path value="DiagnosticReport.context" />
-      <max value="0" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1" />
+        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Encounter-1" />
       </type>
-    </element>
-    <element id="DiagnosticReport.effective[x]">
-      <path value="DiagnosticReport.effective[x]" />
-      <max value="0" />
     </element>
     <element id="DiagnosticReport.issued">
       <path value="DiagnosticReport.issued" />
       <min value="1" />
+    </element>
+    <element id="DiagnosticReport.performer">
+      <path value="DiagnosticReport.performer" />
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.performer.actor">
       <path value="DiagnosticReport.performer.actor" />
@@ -12389,6 +12393,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Specimen-1" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.result">
       <path value="DiagnosticReport.result" />
@@ -12396,17 +12401,15 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1" />
       </type>
+      <mustSupport value="true" />
     </element>
-    <element id="DiagnosticReport.imagingStudy">
-      <path value="DiagnosticReport.imagingStudy" />
-      <max value="0" />
-    </element>
-    <element id="DiagnosticReport.image">
-      <path value="DiagnosticReport.image" />
-      <max value="0" />
+    <element id="DiagnosticReport.conclusion">
+      <path value="DiagnosticReport.conclusion" />
+      <mustSupport value="true" />
     </element>
     <element id="DiagnosticReport.codedDiagnosis">
       <path value="DiagnosticReport.codedDiagnosis" />
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="AdjunctDiagnosis" />
@@ -12476,10 +12479,6 @@
       </extension>
       <path value="DiagnosticReport.codedDiagnosis.coding.display" />
       <min value="1" />
-    </element>
-    <element id="DiagnosticReport.presentedForm">
-      <path value="DiagnosticReport.presentedForm" />
-      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>

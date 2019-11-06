@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><ValueSet xmlns="http://hl7.org/fhir">
    <id value="CareConnect-ListCode-1"/>
    <url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ListCode-1"/>
-   <version value="1.4.0"/>
+   <version value="1.5.0"/>
    <name value="Care Connect List Code"/>
    <status value="draft"/>
-   <date value="2019-09-04T14:30:00+00:00"/>
+   <date value="2019-10-24T17:45:00+00:00"/>
    <publisher value="HL7 UK"/>
    <description value="A ValueSet to identify the purpose of a list."/>
    <copyright value="Copyright © 2019 HL7 UK"/>
@@ -62,6 +62,14 @@
          <concept>
             <code value="826501000000100"/>
             <display value="Miscellaneous record"/>
+         </concept>
+         <concept>
+            <code value="792931000000107"/>
+            <display value="Outbound referral"/>
+         </concept>
+         <concept>
+            <code value="887191000000108"/>
+            <display value="Investigations and results"/>
          </concept>
       </include>
    </compose>
