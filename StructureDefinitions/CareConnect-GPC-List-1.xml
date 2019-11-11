@@ -4,10 +4,10 @@
     <lastUpdated value="2018-05-10T15:25:35.853+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-List-1" />
-  <version value="1.3.0" />
+  <version value="1.4.0" />
   <name value="CareConnect-GPC-List-1" />
   <status value="draft" />
-  <date value="2019-08-28" />
+  <date value="2019-11-04" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -101,7 +101,7 @@
       <short value="Logical id of this artifact" />
       <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Resource.id" />
@@ -9136,10 +9136,6 @@
     </element>
   </snapshot>
   <differential>
-    <element id="List.id">
-      <path value="List.id" />
-      <min value="1" />
-    </element>
     <element id="List.meta.profile">
       <path value="List.meta.profile" />
       <min value="1" />
