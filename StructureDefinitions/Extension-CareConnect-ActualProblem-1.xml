@@ -26,7 +26,7 @@
    <contextType value="resource"/>
    <context value="Condition"/>
    <type value="Extension"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/sExtension"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
    <derivation value="constraint"/>
    <snapshot>
       <element id="Extension">
