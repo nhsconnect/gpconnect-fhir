@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <OperationDefinition xmlns="http://hl7.org/fhir">
 	<id value="GPConnect-GetStructuredRecord-Operation-1"/>
 	<url value="https://fhir.nhs.uk/STU3/OperationDefinition/GPConnect-GetStructuredRecord-Operation-1"/>
-	<version value="1.11.0"/>
+	<version value="1.15.0"/>
 	<name value="GPConnect-GetStructuredRecord-Operation"/>
 	<status value="draft"/>
 	<kind value="operation"/>
-	<date value="2019-11-06"/>
+	<date value="2020-02-11"/>
 	<publisher value="NHS Digital"/>
 	<contact>
 		<name value="Interoperability Team"/>
@@ -53,7 +53,7 @@
 		<part>
 			<name value="includePrescriptionIssues"/>
 			<use value="in"/>
-			<min value="1"/>
+			<min value="0"/>
 			<max value="1"/>
 			<documentation value="Include each prescription issue in the response. By default, prescription issues are not included."/>
 			<type value="boolean"/>
@@ -89,7 +89,7 @@
 			<use value="in"/>
 			<min value="0"/>
 			<max value="1"/>
-			<documentation value="Restrict consultations by defining a time period"/>
+			<documentation value="Restrict consultations by defining a time period."/>
 			<type value="Period"/>
 		</part>
 		<part>
@@ -97,8 +97,8 @@
 			<use value="in"/>
 			<min value="0"/>
 			<max value="1"/>
-			<documentation value="Limit the number of returned consultations"/>
-			<type value="integer"/>
+			<documentation value="Limit the number of returned consultations."/>
+			<type value="positiveInt"/>
 		</part>
 	</parameter>
 	<parameter>
@@ -112,7 +112,7 @@
 			<use value="in"/>
 			<min value="0"/>
 			<max value="1"/>
-			<documentation value="Restrict the problems that are returned by their clinical status"/>
+			<documentation value="Restrict the problems that are returned by their clinical status."/>
 			<type value="code"/>
 			<binding>
 				<strength value="required"/>
@@ -124,7 +124,7 @@
 			<use value="in"/>
 			<min value="0"/>
 			<max value="1"/>
-			<documentation value="Restrict the problems that are returned by their clinical significance"/>
+			<documentation value="Restrict the problems that are returned by their clinical significance."/>
 			<type value="code"/>
 			<binding>
 				<strength value="required"/>
@@ -137,7 +137,15 @@
 		<use value="in"/>
 		<min value="0"/>
 		<max value="1"/>
-		<documentation value="Include immunisations in the response"/>
+		<documentation value="Include immunisations in the response."/>
+		<part>
+			<name value="includeNotGiven"/>
+			<use value="in"/>
+			<min value="0"/>
+			<max value="1"/>
+			<documentation value="Include immunisations not given in the response."/>
+			<type value="Boolean"/>
+		</part>
 	</parameter>
 	<parameter>
 		<name value="includeUncategorisedData"/>
@@ -150,38 +158,23 @@
 			<use value="in"/>
 			<min value="0"/>
 			<max value="1"/>
-			<documentation value="Restrict uncategorised data by defining a time period"/>
+			<documentation value="Restrict uncategorised data by defining a time period."/>
 			<type value="Period"/>
 		</part>
 	</parameter>
 	<parameter>
-		<name value="includeInvestigations"/>
+		<name value="includeDiaryEntries"/>
 		<use value="in"/>
 		<min value="0"/>
 		<max value="1"/>
-		<documentation value="Include investigations in the response"/>
+		<documentation value="Include diary entries in the response."/>
 		<part>
-			<name value="investigationSearchPeriod"/>
+			<name value="diaryEntriesSearchDate"/>
 			<use value="in"/>
 			<min value="0"/>
 			<max value="1"/>
-			<documentation value="Restrict the investigations that are returned by defining a time period"/>
-			<type value="Period"/>
-		</part>
-	</parameter>
-	<parameter>
-		<name value="includeReferrals"/>
-		<use value="in"/>
-		<min value="0"/>
-		<max value="1"/>
-		<documentation value="Include referrals in the response."/>
-		<part>
-			<name value="referralSearchPeriod"/>
-			<use value="in"/>
-			<min value="0"/>
-			<max value="1"/>
-			<documentation value="Restrict uncategorised data by defining a time period"/>
-			<type value="Period"/>
+			<documentation value="Include diary entries prior to the the diaryEntriesSearchDate."/>
+			<type value="Date"/>
 		</part>
 	</parameter>
 </OperationDefinition>
