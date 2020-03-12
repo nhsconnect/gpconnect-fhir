@@ -31,12 +31,12 @@
       <definition value="The problem referenced is the parent of the problem/item in the resource."/>
    </concept>
    <concept>
-      <code value="child "/>
+      <code value="child"/>
       <display value="Child "/>
       <definition value="The problem referenced is the child of the problem/item in the resource."/>
    </concept>
    <concept>
-      <code value="sibling "/>
+      <code value="sibling"/>
       <display value="Sibling "/>
       <definition value="The problem referenced is a sibling of the problem/item in the resource."/>
    </concept>
