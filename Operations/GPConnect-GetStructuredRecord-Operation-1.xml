@@ -144,7 +144,7 @@
 			<min value="0"/>
 			<max value="1"/>
 			<documentation value="Include immunisations not given in the response."/>
-			<type value="Boolean"/>
+			<type value="boolean"/>
 		</part>
 	</parameter>
 	<parameter>
@@ -174,7 +174,7 @@
 			<min value="0"/>
 			<max value="1"/>
 			<documentation value="Include diary entries prior to the the diaryEntriesSearchDate."/>
-			<type value="Date"/>
+			<type value="date"/>
 		</part>
 	</parameter>
 </OperationDefinition>
