@@ -7,7 +7,7 @@
     <valueCode value="oo" />
   </extension>
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1" />
-  <version value="1.4.1" />
+  <version value="1.4.2" />
   <name value="CareConnect-GPC-Observation-1" />
   <status value="draft" />
   <date value="2020-08-06" />
@@ -12736,7 +12736,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="system" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -15160,7 +15160,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="system" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
