@@ -1,0 +1,26 @@
+<CodeSystem
+  xmlns="http://hl7.org/fhir">
+  <id value="GPConnect-ParticipantType-1"></id>
+  <url value="https://fhir.nhs.uk/STU3/CodeSystem/GPConnect-ParticipantType-1"></url>
+  <version value="1.0.0"></version>
+  <name value="GPConnect Participant Type"></name>
+  <status value="active"></status>
+  <date value="2020-08-17T17:21:47+00:00"></date>
+  <publisher value="NHS Digital"></publisher>
+  <contact>
+    <name value="Interoperability Team"></name>
+    <telecom>
+      <system value="email"></system>
+      <value value="interoperabilityteam@nhs.net"></value>
+      <use value="work"></use>
+    </telecom>
+  </contact>
+  <description value="A CodeSystem to identify the type of participant."></description>
+  <copyright value="Copyright © 2020 NHS Digital"></copyright>
+  <caseSensitive value="true"></caseSensitive>
+  <content value="complete"></content>
+  <concept>
+    <code value="REC"></code>
+    <display value="recorder"></display>
+  </concept>
+</CodeSystem>

@@ -1,80 +1,92 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><ValueSet xmlns="http://hl7.org/fhir">
-   <id value="CareConnect-ListCode-1"/>
-   <url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ListCode-1"/>
-   <version value="1.6.0"/>
-   <name value="Care Connect List Code"/>
-   <status value="draft"/>
-   <date value="2019-11-22T17:18:00+00:00"/>
-   <publisher value="HL7 UK"/>
-   <description value="A ValueSet to identify the purpose of a list."/>
-   <copyright value="Copyright © 2019 HL7 UK"/>
-   <compose>
-      <include>
-         <system value="http://snomed.info/sct"/>
-         <concept>
-            <code value="887161000000102"/>
-            <display value="Diagnoses"/>
-         </concept>
-         <concept>
-            <code value="887171000000109"/>
-            <display value="Procedures"/>
-         </concept>
-         <concept>
-            <code value="717711000000103"/>
-            <display value="Problems"/>
-         </concept>
-         <concept>
-            <code value="933361000000108"/>
-            <display value="Medications and medical devices"/>
-         </concept>
-         <concept>
-            <code value="886921000000105"/>
-            <display value="Allergies and adverse reactions"/>
-         </concept>
-         <concept>
-            <code value="1102411000000102"/>
-            <display value="Active medications"/>
-         </concept>
-         <concept>
-            <code value="1102191000000100"/>
-            <display value="Discontinued medications"/>
-         </concept>
-         <concept>
-            <code value="1103671000000101"/>
-            <display value="Ended allergies"/>
-         </concept>
-         <concept>
-            <code value="325851000000107"/>
-            <display value="Consultation"/>
-         </concept>
-         <concept>
-            <code value="25851000000105"/>
-            <display value="Topic (EHR)"/>
-         </concept>
-         <concept>
-            <code value="24781000000107"/>
-            <display value="Category (EHR)"/>
-         </concept>
-         <concept>
-            <code value="1102181000000102"/>
-            <display value="Immunisations"/>
-         </concept>
-         <concept>
-            <code value="826501000000100"/>
-            <display value="Miscellaneous record"/>
-         </concept>
-         <concept>
-            <code value="792931000000107"/>
-            <display value="Outbound referral"/>
-         </concept>
-         <concept>
-            <code value="887191000000108"/>
-            <display value="Investigations and results"/>
-         </concept>
-         <concept>
-            <code value="1149501000000101"/>
-            <display value="List of consultations"/>
-         </concept>
-      </include>
-   </compose>
+<ValueSet
+  xmlns="http://hl7.org/fhir">
+  <id value="CareConnect-ListCode-1"></id>
+  <url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ListCode-1"></url>
+  <version value="1.8.0"></version>
+  <name value="Care Connect List Code"></name>
+  <status value="draft"></status>
+  <date value="2020-09-29T17:18:00+00:00"></date>
+  <publisher value="HL7 UK"></publisher>
+  <description value="A ValueSet to identify the purpose of a list."></description>
+  <copyright value="Copyright © 2020 HL7 UK"></copyright>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"></system>
+      <concept>
+        <code value="887161000000102"></code>
+        <display value="Diagnoses"></display>
+      </concept>
+      <concept>
+        <code value="887171000000109"></code>
+        <display value="Procedures"></display>
+      </concept>
+      <concept>
+        <code value="717711000000103"></code>
+        <display value="Problems"></display>
+      </concept>
+      <concept>
+        <code value="933361000000108"></code>
+        <display value="Medications and medical devices"></display>
+      </concept>
+      <concept>
+        <code value="886921000000105"></code>
+        <display value="Allergies and adverse reactions"></display>
+      </concept>
+      <concept>
+        <code value="1102411000000102"></code>
+        <display value="Active medications"></display>
+      </concept>
+      <concept>
+        <code value="1102191000000100"></code>
+        <display value="Discontinued medications"></display>
+      </concept>
+      <concept>
+        <code value="1103671000000101"></code>
+        <display value="Ended allergies"></display>
+      </concept>
+      <concept>
+        <code value="325851000000107"></code>
+        <display value="Consultation"></display>
+      </concept>
+      <concept>
+        <code value="25851000000105"></code>
+        <display value="Topic (EHR)"></display>
+      </concept>
+      <concept>
+        <code value="24781000000107"></code>
+        <display value="Category (EHR)"></display>
+      </concept>
+      <concept>
+        <code value="1102181000000102"></code>
+        <display value="Immunisations"></display>
+      </concept>
+      <concept>
+        <code value="826501000000100"></code>
+        <display value="Miscellaneous record"></display>
+      </concept>
+      <concept>
+        <code value="792931000000107"></code>
+        <display value="Outbound referral"></display>
+      </concept>
+      <concept>
+        <code value="887191000000108"></code>
+        <display value="Investigations and results"></display>
+      </concept>
+      <concept>
+        <code value="1149501000000101"></code>
+        <display value="List of consultations"></display>
+      </concept>
+      <concept>
+        <code value="225390008"></code>
+        <display value="Triage"></display>
+      </concept>
+      <concept>
+        <code value="714311000000108"></code>
+        <display value="Patient recall administration"></display>
+      </concept>
+    </include>
+    <include>
+      <system value="https://fhir.hl7.org.uk/STU3/CodeSystem/GPConnect-SecondaryListValues-1"></system>
+    </include>
+  </compose>
 </ValueSet>
