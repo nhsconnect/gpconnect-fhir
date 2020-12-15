@@ -2,10 +2,10 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="Spine-ErrorOrWarningCode-1"/>
 	<url value="https://fhir.nhs.uk/STU3/CodeSystem/Spine-ErrorOrWarningCode-1"/>
-	<version value="1.4.0"/>
+	<version value="1.6.0"/>
 	<name value="Spine Error Or Warning Code"/>
 	<status value="active"/>
-	<date value="2018-10-17T00:00:00+00:00"/>
+	<date value="2020-11-24T00:00:00+00:00"/>
 	<publisher value="NHS Digital"/>
 	<contact>
 		<name value="Interoperability Team"/>
@@ -16,7 +16,7 @@
 		</telecom>
 	</contact>
 	<description value="A CodeSystem that identifies the Spine error or warning code in response to a request."/>
-	<copyright value="Copyright © 2017 NHS Digital"/>
+	<copyright value="Copyright © 2020 NHS Digital"/>
 	<caseSensitive value="true"/>
 	<content value="complete"/>
 	<concept>
@@ -156,6 +156,10 @@
 		<display value="Resource removed"/>
 	</concept>
 	<concept>
+		<code value="RESOURCE_UPDATED"/>
+		<display value="Resource has been successfully updated"/>
+	</concept>
+	<concept>
 		<code value="INVALID_REQUEST_MESSAGE"/>
 		<display value="Invalid request message"/>
 	</concept>
@@ -163,16 +167,32 @@
 		<code value="INTERNAL_SERVER_ERROR"/>
 		<display value="Unexpected internal server error"/>
 	</concept>
-		<concept>
+	<concept>
 		<code value="INVALID_PATIENT_DEMOGRAPHICS"/>
 		<display value="Invalid patient demographics"/>
 	</concept>
-		<concept>
+	<concept>
 		<code value="NOT_IMPLEMENTED"/>
 		<display value="Not implemented"/>
 	</concept>
-		<concept>
+	<concept>
 		<code value="REFERENCE_NOT_FOUND"/>
 		<display value="Reference not found"/>
+	</concept>
+	<concept>
+		<code value="DEPRECATED"/>
+		<display value="Event message type has been deprecated"/>
+	</concept>
+	<concept>
+		<code value="NO_LONGER_SUPPORTED"/>
+		<display value="Event message type is no longer supported"/>
+	</concept>
+	<concept>
+		<code value="WITHDRAWN"/>
+		<display value="Event message type has been withdrawn"/>
+	</concept>
+	<concept>
+		<code value="UNSUPPORTED_MEDIA_TYPE"/>
+		<display value="Unsupported media type"/>
 	</concept>
 </CodeSystem>

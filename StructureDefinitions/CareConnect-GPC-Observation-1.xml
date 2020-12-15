@@ -7,10 +7,10 @@
     <valueCode value="oo" />
   </extension>
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1" />
-  <version value="1.4.2" />
+  <version value="1.5" />
   <name value="CareConnect-GPC-Observation-1" />
   <status value="draft" />
-  <date value="2020-08-06" />
+  <date value="2020-11-23" />
   <publisher value="HL7 UK" />
   <description value="The Observation resource is used for tracking the current and historical observations that have been made for a patient." />
   <copyright value="Copyright © 2020 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
@@ -15125,7 +15125,6 @@
     </element>
     <element id="Observation.referenceRange">
       <path value="Observation.referenceRange" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.related">
