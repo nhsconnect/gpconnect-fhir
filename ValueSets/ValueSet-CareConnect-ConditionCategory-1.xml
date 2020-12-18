@@ -1,0 +1,17 @@
+<ValueSet
+  xmlns="http://hl7.org/fhir">
+  <id value="CareConnect-ConditionCategory-1"></id>
+  <url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionCategory-1"></url>
+  <version value="1.1.0"></version>
+  <name value="Care Connect Condition Category"></name>
+  <status value="draft"></status>
+  <date value="2018-11-14T00:00:00+00:00"></date>
+  <publisher value="HL7 UK"></publisher>
+  <description value="A ValueSet to identify the category of a condition."></description>
+  <copyright value="Copyright © 2016 HL7 UK"></copyright>
+  <compose>
+    <include>
+      <system value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1"></system>
+    </include>
+  </compose>
+</ValueSet>

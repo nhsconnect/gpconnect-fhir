@@ -7,7 +7,7 @@
     <valueCode value="oo" />
   </extension>
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1" />
-  <version value="1.5" />
+  <version value="1.6" />
   <name value="CareConnect-GPC-Observation-1" />
   <status value="draft" />
   <date value="2020-11-23" />
@@ -5368,7 +5368,7 @@
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <requirements value="May give a degree of confidence in the observation and also indicates where follow-up questions should be directed." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Observation.performer" />
         <min value="0" />
@@ -14910,7 +14910,6 @@
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1" />
