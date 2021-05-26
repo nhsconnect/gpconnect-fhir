@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-ObservationInterpretation-1"/>
+	<url value="https://fhir.nhs.uk/STU3/CodeSystem/CareConnect-ObservationInterpretation-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Observation Interpretation"/>
+	<status value="active"/>
+	<date value="2021-04-28T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem that identifies the assessment made based on the result of the observation. The code is taken from the oid 2.16.840.1.113883.2.1.3.2.4.17.304."/>
+	<copyright value="Copyright © 2021 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="PA"/>
+		<display value="Potentially abnormal"/>
+	</concept>
+</CodeSystem>
