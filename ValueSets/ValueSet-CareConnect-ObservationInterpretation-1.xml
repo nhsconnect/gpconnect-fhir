@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-ObservationInterpretation-1"/>
+	<url value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-ObservationInterpretation-1"/>
+	<version value="1.0.0"/>
+	<name value="CareConnect Observation Interpretation"/>
+	<status value="draft"/>
+	<date value="2021-04-27T17:16:00+00:00"/>
+	<publisher value="NHS Digital"/>
+	<contact>
+		<name value="Interoperability Team"/>
+		<telecom>
+			<system value="email"/>
+			<value value="interoperabilityteam@nhs.net"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<description value="A ValueSet to identify the assessment made based on the result of the observation."/>
+	<copyright value="Copyright © 2021 NHS Digital"/>
+	<compose>
+		<include>
+			<system value="https://fhir.nhs.uk/STU3/CodeSystem/CareConnect-ObservationInterpretation-1"/>
+		</include>
+		<include>
+			<system value="http://terminology.hl7.org/CodeSystem/v2-0078"/>
+			<concept>
+				<code value="<"/>
+					<display value="Off scale low"/>
+			</concept>
+			<concept>
+				<code value=">"/>
+					<display value="Off scale high"/>
+			</concept>
+			<concept>
+				<code value="A"/>
+					<display value="Abnormal"/>
+			</concept>
+			<concept>
+				<code value="AA"/>
+					<display value="Critically abnormal"/>
+			</concept>
+			<concept>
+				<code value="AC"/>
+					<display value="Anti-complementary"/>
+			</concept>
+			<concept>
+				<code value="B"/>
+					<display value="Better"/>
+			</concept>
+			<concept>
+				<code value="D"/>
+					<display value="Significant change down"/>
+			</concept>
+			<concept>
+				<code value="DET"/>
+					<display value="Detected"/>
+			</concept>
+			<concept>
+				<code value="H"/>
+					<display value="High"/>
+			</concept>
+			<concept>
+				<code value="HH"/>
+					<display value="Critically high"/>
+			</concept>
+			<concept>
+				<code value="HM"/>
+					<display value="Hold for Medical Review"/>
+			</concept>
+			<concept>
+				<code value="HU"/>
+					<display value="Very high"/>
+			</concept>
+			<concept>
+				<code value="I"/>
+					<display value="Intermediate"/>
+			</concept>
+			<concept>
+				<code value="IE"/>
+					<display value="Insufficient evidence"/>
+			</concept>
+			<concept>
+				<code value="IND"/>
+					<display value="Indeterminate"/>
+			</concept>
+			<concept>
+				<code value="L"/>
+					<display value="Low"/>
+			</concept>
+			<concept>
+				<code value="LL"/>
+					<display value="Critically low"/>
+			</concept>
+			<concept>
+				<code value="LU"/>
+					<display value="Very low"/>
+			</concept>
+			<concept>
+				<code value="MS"/>
+					<display value="Moderately susceptible"/>
+			</concept>
+			<concept>
+				<code value="N"/>
+					<display value="Normal"/>
+			</concept>
+			<concept>
+				<code value="ND"/>
+					<display value="Not Detected"/>
+			</concept>
+			<concept>
+				<code value="NEG"/>
+					<display value="Negative"/>
+			</concept>
+			<concept>
+				<code value="NR"/>
+					<display value="Non-reactive"/>
+			</concept>
+			<concept>
+				<code value="NS"/>
+					<display value="Non-susceptible"/>
+			</concept>
+			<concept>
+				<code value="null"/>
+					<display value="No range defined, or normal ranges don't apply"/>
+			</concept>
+			<concept>
+				<code value="OBX"/>
+					<display value="Interpretation qualifiers in separate OBX segments"/>
+			</concept>
+			<concept>
+				<code value="POS"/>
+					<display value="Positive"/>
+			</concept>
+			<concept>
+				<code value="QCF"/>
+					<display value="Quality Control Failure"/>
+			</concept>
+			<concept>
+				<code value="R"/>
+					<display value="Resistant"/>
+			</concept>
+			<concept>
+				<code value="RR"/>
+					<display value="Reactive"/>
+			</concept>
+			<concept>
+				<code value="S"/>
+					<display value="Susceptible"/>
+			</concept>
+			<concept>
+				<code value="SDD"/>
+					<display value="Susceptible-dose dependent"/>
+			</concept>
+			<concept>
+				<code value="SYN-R"/>
+					<display value="Synergy - resistant"/>
+			</concept>
+			<concept>
+				<code value="SYN-S"/>
+					<display value="Synergy - susceptible"/>
+			</concept>
+			<concept>
+				<code value="TOX"/>
+					<display value="Cytotoxic substance present"/>
+			</concept>
+			<concept>
+				<code value="U"/>
+					<display value="Significant change up"/>
+			</concept>
+			<concept>
+				<code value="VS"/>
+					<display value="Very susceptible. Indicates for microbiology susceptibilities only."/>
+			</concept>
+			<concept>
+				<code value="W"/>
+					<display value="Worse"/>
+			</concept>
+			<concept>
+				<code value="WR"/>
+					<display value="Weakly reactive"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>
