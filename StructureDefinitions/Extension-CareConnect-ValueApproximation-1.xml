@@ -1,0 +1,226 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="Extension-CareConnect-ValueApproximation-1"></id>
+    <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ValueApproximation-1"></url>
+    <version value="1.0.0"></version>
+    <name value="Extension-CareConnect-ValueApproximation-1"></name>
+    <status value="draft"></status>
+    <date value="2019-03-05T12:45:42.576+00:00"></date>
+    <publisher value="HL7 UK"></publisher>
+    <contact>
+        <name value="INTEROPen"></name>
+        <telecom>
+            <system value="email"></system>
+            <value value="admin@interopen.org"></value>
+            <use value="work"></use>
+        </telecom>
+    </contact>
+    <description value="An code to indicate that a given value is only an approximation."></description>
+    <purpose value="CURATED BY INTEROPen see: http://www.interopen.org/careconnect-curation-methodology/ "></purpose>
+    <copyright value="Copyright © 2019 HL7 UK  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.  HL7® FHIR® standard Copyright © 2011+ HL7  The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html"></copyright>
+    <fhirVersion value="3.0.1"></fhirVersion>
+    <kind value="complex-type"></kind>
+    <abstract value="false"></abstract>
+    <contextType value="datatype"></contextType>
+    <context value="Quantity"></context>
+    <type value="Extension"></type>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"></baseDefinition>
+    <derivation value="constraint"></derivation>
+    <snapshot>
+        <element id="Extension">
+            <path value="Extension"></path>
+            <short value="Optional Extensions Element"></short>
+            <definition value="Optional Extension Element - found in all resources."></definition>
+            <min value="0"></min>
+            <max value="*"></max>
+            <base>
+                <path value="Element"></path>
+                <min value="0"></min>
+                <max value="*"></max>
+            </base>
+            <condition value="ele-1"></condition>
+            <constraint>
+                <key value="ele-1"></key>
+                <severity value="error"></severity>
+                <human value="All FHIR elements must have a @value or children"></human>
+                <expression value="hasValue() | (children().count() &gt; id.count())"></expression>
+                <xpath value="@value|f:*|h:div"></xpath>
+            </constraint>
+            <constraint>
+                <key value="ext-1"></key>
+                <severity value="error"></severity>
+                <human value="Must have either extensions or value[x], not both"></human>
+                <expression value="extension.exists() != value.exists()"></expression>
+                <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"></xpath>
+            </constraint>
+            <mapping>
+                <identity value="rim"></identity>
+                <map value="n/a"></map>
+            </mapping>
+            <mapping>
+                <identity value="rim"></identity>
+                <map value="N/A"></map>
+            </mapping>
+        </element>
+        <element id="Extension.id">
+            <path value="Extension.id"></path>
+            <representation value="xmlAttr"></representation>
+            <short value="xml:id (or equivalent in JSON)"></short>
+            <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."></definition>
+            <comment value="Note that FHIR strings may not exceed 1MB in size"></comment>
+            <min value="0"></min>
+            <max value="1"></max>
+            <base>
+                <path value="Element.id"></path>
+                <min value="0"></min>
+                <max value="1"></max>
+            </base>
+            <type>
+                <code value="string"></code>
+            </type>
+            <condition value="ele-1"></condition>
+            <constraint>
+                <key value="ele-1"></key>
+                <severity value="error"></severity>
+                <human value="All FHIR elements must have a @value or children"></human>
+                <expression value="hasValue() | (children().count() &gt; id.count())"></expression>
+                <xpath value="@value|f:*|h:div"></xpath>
+            </constraint>
+            <mapping>
+                <identity value="rim"></identity>
+                <map value="n/a"></map>
+            </mapping>
+        </element>
+        <element id="Extension.extension">
+            <path value="Extension.extension"></path>
+            <slicing>
+                <discriminator>
+                    <type value="value"></type>
+                    <path value="url"></path>
+                </discriminator>
+                <description value="Extensions are always sliced by (at least) url"></description>
+                <rules value="open"></rules>
+            </slicing>
+            <short value="Additional Content defined by implementations"></short>
+            <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."></definition>
+            <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."></comment>
+            <alias value="extensions"></alias>
+            <alias value="user content"></alias>
+            <min value="0"></min>
+            <max value="*"></max>
+            <base>
+                <path value="Element.extension"></path>
+                <min value="0"></min>
+                <max value="*"></max>
+            </base>
+            <type>
+                <code value="Extension"></code>
+            </type>
+            <condition value="ele-1"></condition>
+            <constraint>
+                <key value="ele-1"></key>
+                <severity value="error"></severity>
+                <human value="All FHIR elements must have a @value or children"></human>
+                <expression value="hasValue() | (children().count() &gt; id.count())"></expression>
+                <xpath value="@value|f:*|h:div"></xpath>
+            </constraint>
+            <constraint>
+                <key value="ext-1"></key>
+                <severity value="error"></severity>
+                <human value="Must have either extensions or value[x], not both"></human>
+                <expression value="extension.exists() != value.exists()"></expression>
+                <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"></xpath>
+            </constraint>
+            <mapping>
+                <identity value="rim"></identity>
+                <map value="n/a"></map>
+            </mapping>
+            <mapping>
+                <identity value="rim"></identity>
+                <map value="N/A"></map>
+            </mapping>
+        </element>
+        <element id="Extension.url">
+            <path value="Extension.url"></path>
+            <representation value="xmlAttr"></representation>
+            <short value="identifies the meaning of the extension"></short>
+            <definition value="Source of the definition for the extension code - a logical name or a URL."></definition>
+            <comment value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension."></comment>
+            <min value="1"></min>
+            <max value="1"></max>
+            <base>
+                <path value="Extension.url"></path>
+                <min value="1"></min>
+                <max value="1"></max>
+            </base>
+            <type>
+                <code value="uri"></code>
+            </type>
+            <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ValueApproximation-1"></fixedUri>
+            <condition value="ele-1"></condition>
+            <constraint>
+                <key value="ele-1"></key>
+                <severity value="error"></severity>
+                <human value="All FHIR elements must have a @value or children"></human>
+                <expression value="hasValue() | (children().count() &gt; id.count())"></expression>
+                <xpath value="@value|f:*|h:div"></xpath>
+            </constraint>
+            <mapping>
+                <identity value="rim"></identity>
+                <map value="n/a"></map>
+            </mapping>
+            <mapping>
+                <identity value="rim"></identity>
+                <map value="N/A"></map>
+            </mapping>
+        </element>
+        <element id="Extension.value[x]:valueAppromimate">
+            <path value="Extension.valueBoolean"></path>
+            <sliceName value="valueBoolean"></sliceName>
+            <short value="Indicates if value is approximate"></short>
+            <definition value="Indicates if value is approximate"></definition>
+            <comment value="A stream of bytes, base64 encoded"></comment>
+            <min value="1"></min>
+            <max value="1"></max>
+            <base>
+                <path value="Extension.value[x]"></path>
+                <min value="0"></min>
+                <max value="1"></max>
+            </base>
+            <type>
+                <code value="boolean"></code>
+            </type>
+            <condition value="ele-1"></condition>
+            <constraint>
+                <key value="ele-1"></key>
+                <severity value="error"></severity>
+                <human value="All FHIR elements must have a @value or children"></human>
+                <expression value="hasValue() | (children().count() &gt; id.count())"></expression>
+                <xpath value="@value|f:*|h:div"></xpath>
+            </constraint>
+            <mapping>
+                <identity value="rim"></identity>
+                <map value="n/a"></map>
+            </mapping>
+            <mapping>
+                <identity value="rim"></identity>
+                <map value="N/A"></map>
+            </mapping>
+        </element>
+    </snapshot>
+    <differential>
+        <element id="Extension.url">
+            <path value="Extension.url"></path>
+            <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ValueApproximation-1"></fixedUri>
+        </element>
+        <element id="Extension.value[x]:valueAppromimate">
+            <path value="Extension.valueBoolean"></path>
+            <sliceName value="valueBoolean"></sliceName>
+            <short value="Indicates if value is approximate"></short>
+            <definition value="Indicates if value is approximate"></definition>
+            <min value="1"></min>
+            <type>
+                <code value="boolean"></code>
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>
